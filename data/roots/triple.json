@@ -1,0 +1,69 @@
+{
+  "type": "root",
+  "key": "triple",
+  "name": "三灵根",
+  "phase": 1,
+  "public": {
+    "source": "通用修仙设定",
+    "description": "用于首轮格式评审的灵根类别；概率与速度仍为待审核草案。"
+  },
+  "rules": {
+    "kind": "triple",
+    "probability": 0.27,
+    "speed": "medium",
+    "elements": [
+      [
+        "metal",
+        "wood",
+        "water"
+      ],
+      [
+        "metal",
+        "wood",
+        "fire"
+      ],
+      [
+        "metal",
+        "wood",
+        "earth"
+      ],
+      [
+        "metal",
+        "water",
+        "fire"
+      ],
+      [
+        "metal",
+        "water",
+        "earth"
+      ],
+      [
+        "metal",
+        "fire",
+        "earth"
+      ],
+      [
+        "wood",
+        "water",
+        "fire"
+      ],
+      [
+        "wood",
+        "water",
+        "earth"
+      ],
+      [
+        "wood",
+        "fire",
+        "earth"
+      ],
+      [
+        "water",
+        "fire",
+        "earth"
+      ]
+    ]
+  },
+  "narration": {},
+  "secret": {}
+}

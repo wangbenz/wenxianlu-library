@@ -1,0 +1,44 @@
+{
+  "type": "item",
+  "key": "spirit-stone",
+  "name": "下品灵石",
+  "phase": 1,
+  "public": {
+    "source": "通用修仙设定",
+    "description": "含有少量灵气的晶石。",
+    "usage": "修士交易时使用的计价物。",
+    "limitations": "消耗后的数量由游戏存档记录，资料库不负责结算。",
+    "aliases": [
+      "灵石"
+    ]
+  },
+  "rules": {
+    "category": "spirit_stone",
+    "grade": "low",
+    "rarity": "common",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 1,
+      "max": 1,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "reward"
+    ],
+    "found_in": [
+      "place:qingxi-town"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "currency",
+      "note": "样例计价单位，不执行兑换或玩家余额变化。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "灰白晶石中有细淡的流光。"
+  },
+  "secret": {}
+}

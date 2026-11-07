@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wenxian.local/schema/event.json",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "event"
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "maxLength": 80
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "[㐀-鿿]"
+    },
+    "phase": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "public": {
+      "type": "object",
+      "properties": {
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "minItems": 0,
+          "maxItems": 20,
+          "uniqueItems": true
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "通用修仙设定",
+            "问仙录原创设定"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "pool": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+        },
+        "weight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "trigger": {
+          "type": "object",
+          "properties": {
+            "places": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^(?:place):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+              },
+              "minItems": 1,
+              "maxItems": 100,
+              "uniqueItems": true
+            },
+            "realm_range": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "phase": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3
+            }
+          },
+          "required": [
+            "places",
+            "realm_range",
+            "phase"
+          ],
+          "additionalProperties": false
+        },
+        "involves": {
+          "type": "object",
+          "properties": {
+            "characters": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^(?:character):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+              },
+              "minItems": 0,
+              "maxItems": 100,
+              "uniqueItems": true
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+              },
+              "minItems": 0,
+              "maxItems": 100,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "characters",
+            "items"
+          ],
+          "additionalProperties": false
+        },
+        "reward_cap": {
+          "type": "object",
+          "properties": {
+            "max_rarity": {
+              "type": "string",
+              "enum": [
+                "common",
+                "uncommon",
+                "rare",
+                "precious"
+              ]
+            },
+            "max_items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "max_rarity",
+            "max_items"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "pool",
+        "weight",
+        "trigger",
+        "involves",
+        "reward_cap"
+      ],
+      "additionalProperties": false
+    },
+    "narration": {
+      "type": "object",
+      "properties": {
+        "setup": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "outcomes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          },
+          "minItems": 1,
+          "maxItems": 20,
+          "uniqueItems": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "secret": {
+      "type": "object",
+      "properties": {
+        "truth": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "type",
+    "key",
+    "name",
+    "phase",
+    "public",
+    "rules",
+    "narration",
+    "secret"
+  ],
+  "additionalProperties": false
+}

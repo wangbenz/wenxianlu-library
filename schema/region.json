@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wenxian.local/schema/region.json",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "region"
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "maxLength": 80
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "[㐀-鿿]"
+    },
+    "phase": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "public": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "minItems": 0,
+          "maxItems": 20,
+          "uniqueItems": true
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "通用修仙设定",
+            "问仙录原创设定"
+          ]
+        }
+      },
+      "required": [
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "realm_range": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "danger": {
+          "type": "string",
+          "enum": [
+            "safe",
+            "low",
+            "medium",
+            "high",
+            "deadly"
+          ]
+        }
+      },
+      "required": [
+        "realm_range",
+        "danger"
+      ],
+      "additionalProperties": false
+    },
+    "narration": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "secret": {
+      "type": "object",
+      "properties": {
+        "notes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "type",
+    "key",
+    "name",
+    "phase",
+    "public",
+    "rules",
+    "narration",
+    "secret"
+  ],
+  "additionalProperties": false
+}

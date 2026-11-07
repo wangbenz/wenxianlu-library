@@ -1,0 +1,544 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wenxian.local/schema/item.json",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "item"
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "maxLength": 80
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "[㐀-鿿]"
+    },
+    "phase": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "public": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "usage": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "limitations": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "minItems": 0,
+          "maxItems": 20,
+          "uniqueItems": true
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "通用修仙设定",
+            "问仙录原创设定"
+          ]
+        }
+      },
+      "required": [
+        "description",
+        "usage",
+        "limitations"
+      ],
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "spirit_stone",
+            "pill",
+            "herb",
+            "material",
+            "talisman",
+            "artifact",
+            "manual"
+          ]
+        },
+        "grade": {
+          "type": "string",
+          "enum": [
+            "low",
+            "mid",
+            "high",
+            "supreme",
+            "tier_1",
+            "tier_2",
+            "tier_3",
+            "tier_4",
+            "tier_5",
+            "tier_6",
+            "tier_7",
+            "tier_8",
+            "tier_9",
+            "low_artifact",
+            "mid_artifact",
+            "high_artifact",
+            "supreme_artifact",
+            "magic_treasure",
+            "spirit_treasure",
+            "huang_low",
+            "huang_mid",
+            "huang_high",
+            "xuan_low",
+            "xuan_mid",
+            "xuan_high",
+            "di_low",
+            "di_mid",
+            "di_high",
+            "tian_low",
+            "tian_mid",
+            "tian_high"
+          ]
+        },
+        "rarity": {
+          "type": "string",
+          "enum": [
+            "common",
+            "uncommon",
+            "rare",
+            "precious"
+          ]
+        },
+        "realm": {
+          "type": "string",
+          "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+        },
+        "price": {
+          "type": "object",
+          "properties": {
+            "currency": {
+              "type": "string",
+              "enum": [
+                "spirit_stone",
+                "silver"
+              ]
+            },
+            "min": {
+              "type": "number",
+              "minimum": 0
+            },
+            "max": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unit": {
+              "type": "string",
+              "enum": [
+                "low_spirit_stone",
+                "silver_liang"
+              ]
+            }
+          },
+          "required": [
+            "currency",
+            "min",
+            "max",
+            "unit"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "currency": {
+                    "const": "spirit_stone"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "unit": {
+                    "const": "low_spirit_stone"
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "currency": {
+                    "const": "silver"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "unit": {
+                    "const": "silver_liang"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "obtain": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "market",
+              "sect",
+              "gather",
+              "craft",
+              "monster",
+              "secret_realm",
+              "reward"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 100,
+          "uniqueItems": true
+        },
+        "found_in": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(?:place):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          },
+          "minItems": 0,
+          "maxItems": 100,
+          "uniqueItems": true
+        },
+        "stackable": {
+          "type": "boolean"
+        },
+        "effect": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "cultivation_boost",
+                "breakthrough_aid",
+                "heal",
+                "restore_spirit",
+                "sustenance",
+                "protect",
+                "attack",
+                "movement",
+                "storage",
+                "utility",
+                "material",
+                "currency"
+              ]
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            }
+          },
+          "required": [
+            "type",
+            "note"
+          ],
+          "additionalProperties": false
+        },
+        "side_effects": {
+          "type": "string",
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "category",
+        "grade",
+        "rarity",
+        "realm",
+        "price",
+        "obtain",
+        "found_in",
+        "stackable",
+        "effect"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "spirit_stone"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "grade": {
+                "type": "string",
+                "enum": [
+                  "low",
+                  "mid",
+                  "high",
+                  "supreme"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "pill"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "grade": {
+                "type": "string",
+                "enum": [
+                  "tier_1",
+                  "tier_2",
+                  "tier_3",
+                  "tier_4",
+                  "tier_5",
+                  "tier_6",
+                  "tier_7",
+                  "tier_8",
+                  "tier_9"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "herb"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "grade": {
+                "type": "string",
+                "enum": [
+                  "tier_1",
+                  "tier_2",
+                  "tier_3",
+                  "tier_4",
+                  "tier_5",
+                  "tier_6",
+                  "tier_7",
+                  "tier_8",
+                  "tier_9"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "material"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "grade": {
+                "type": "string",
+                "enum": [
+                  "tier_1",
+                  "tier_2",
+                  "tier_3",
+                  "tier_4",
+                  "tier_5",
+                  "tier_6",
+                  "tier_7",
+                  "tier_8",
+                  "tier_9"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "talisman"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "grade": {
+                "type": "string",
+                "enum": [
+                  "tier_1",
+                  "tier_2",
+                  "tier_3",
+                  "tier_4",
+                  "tier_5",
+                  "tier_6",
+                  "tier_7",
+                  "tier_8",
+                  "tier_9"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "artifact"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "grade": {
+                "type": "string",
+                "enum": [
+                  "low_artifact",
+                  "mid_artifact",
+                  "high_artifact",
+                  "supreme_artifact",
+                  "magic_treasure",
+                  "spirit_treasure"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "manual"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "grade": {
+                "type": "string",
+                "enum": [
+                  "huang_low",
+                  "huang_mid",
+                  "huang_high",
+                  "xuan_low",
+                  "xuan_mid",
+                  "xuan_high",
+                  "di_low",
+                  "di_mid",
+                  "di_high",
+                  "tian_low",
+                  "tian_mid",
+                  "tian_high"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "spirit_stone"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "effect": {
+                "properties": {
+                  "type": {
+                    "const": "currency"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "material"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "effect": {
+                "properties": {
+                  "type": {
+                    "const": "material"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "narration": {
+      "type": "object",
+      "properties": {
+        "appearance": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "secret": {
+      "type": "object",
+      "properties": {
+        "notes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "type",
+    "key",
+    "name",
+    "phase",
+    "public",
+    "rules",
+    "narration",
+    "secret"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,33 @@
+{
+  "type": "realm",
+  "key": "fanren",
+  "name": "凡人",
+  "phase": 1,
+  "public": {
+    "source": "通用修仙设定",
+    "description": "尚未引气入体的人族。",
+    "usage": "作为初始身份记录。",
+    "limitations": "不能施展依赖法力的术法。"
+  },
+  "rules": {
+    "order": 0,
+    "detail": "full",
+    "stages": [
+      {
+        "key": "mortal",
+        "name": "凡人"
+      }
+    ],
+    "lifespan_years": 80,
+    "can": [
+      "mundane_labor",
+      "ordinary_weapon"
+    ],
+    "cannot": [
+      "basic_spell",
+      "weapon_flight"
+    ]
+  },
+  "narration": {},
+  "secret": {}
+}

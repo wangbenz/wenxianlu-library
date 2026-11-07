@@ -1,0 +1,19 @@
+{
+  "type": "region",
+  "key": "zhongzhou",
+  "name": "中洲",
+  "phase": 1,
+  "public": {
+    "source": "问仙录原创设定",
+    "description": "凡俗聚落与修士往来较多的大域。样例只描述最初入道所需的范围。"
+  },
+  "rules": {
+    "realm_range": [
+      "realm:fanren",
+      "realm:lianqi"
+    ],
+    "danger": "low"
+  },
+  "narration": {},
+  "secret": {}
+}
