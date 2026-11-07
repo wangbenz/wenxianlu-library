@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wenxian.local/schema/root.json",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "root"
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "maxLength": 80
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "[㐀-鿿]"
+    },
+    "phase": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "public": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "minItems": 0,
+          "maxItems": 20,
+          "uniqueItems": true
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "通用修仙设定",
+            "问仙录原创设定"
+          ]
+        }
+      },
+      "required": [
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "heavenly",
+            "mutant",
+            "dual",
+            "triple",
+            "quad",
+            "penta"
+          ]
+        },
+        "probability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "speed": {
+          "type": "string",
+          "enum": [
+            "extreme",
+            "very_fast",
+            "fast",
+            "medium",
+            "slow",
+            "very_slow"
+          ]
+        },
+        "elements": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "metal",
+                "wood",
+                "water",
+                "fire",
+                "earth",
+                "wind",
+                "thunder",
+                "ice"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 5,
+            "uniqueItems": true
+          },
+          "minItems": 1,
+          "maxItems": 20,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "probability",
+        "speed",
+        "elements"
+      ],
+      "additionalProperties": false
+    },
+    "narration": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "secret": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "type",
+    "key",
+    "name",
+    "phase",
+    "public",
+    "rules",
+    "narration",
+    "secret"
+  ],
+  "additionalProperties": false
+}

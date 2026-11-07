@@ -1,0 +1,49 @@
+{
+  "type": "root",
+  "key": "quad",
+  "name": "四灵根",
+  "phase": 1,
+  "public": {
+    "source": "通用修仙设定",
+    "description": "用于首轮格式评审的灵根类别；概率与速度仍为待审核草案。"
+  },
+  "rules": {
+    "kind": "quad",
+    "probability": 0.3,
+    "speed": "slow",
+    "elements": [
+      [
+        "metal",
+        "wood",
+        "water",
+        "fire"
+      ],
+      [
+        "metal",
+        "wood",
+        "water",
+        "earth"
+      ],
+      [
+        "metal",
+        "wood",
+        "fire",
+        "earth"
+      ],
+      [
+        "metal",
+        "water",
+        "fire",
+        "earth"
+      ],
+      [
+        "wood",
+        "water",
+        "fire",
+        "earth"
+      ]
+    ]
+  },
+  "narration": {},
+  "secret": {}
+}

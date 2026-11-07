@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wenxian.local/schema/character.json",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "character"
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "maxLength": 80
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "[㐀-鿿]"
+    },
+    "phase": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "public": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "minItems": 0,
+          "maxItems": 20,
+          "uniqueItems": true
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "通用修仙设定",
+            "问仙录原创设定"
+          ]
+        }
+      },
+      "required": [
+        "description",
+        "identity"
+      ],
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "realm": {
+          "type": "string",
+          "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+        },
+        "stage": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+        },
+        "faction": {
+          "type": "string",
+          "pattern": "^(?:faction):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+        },
+        "location": {
+          "type": "string",
+          "pattern": "^(?:place):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+        },
+        "holdings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          },
+          "minItems": 0,
+          "maxItems": 100,
+          "uniqueItems": true
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "recruiter",
+            "guide",
+            "merchant",
+            "herbalist",
+            "innkeeper",
+            "resident"
+          ]
+        }
+      },
+      "required": [
+        "realm",
+        "stage",
+        "location",
+        "holdings",
+        "role"
+      ],
+      "additionalProperties": false
+    },
+    "narration": {
+      "type": "object",
+      "properties": {
+        "personality": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "speech": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "secret": {
+      "type": "object",
+      "properties": {
+        "hidden_identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "type",
+    "key",
+    "name",
+    "phase",
+    "public",
+    "rules",
+    "narration",
+    "secret"
+  ],
+  "additionalProperties": false
+}

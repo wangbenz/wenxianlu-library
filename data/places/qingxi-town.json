@@ -1,0 +1,31 @@
+{
+  "type": "place",
+  "key": "qingxi-town",
+  "name": "青溪镇",
+  "phase": 1,
+  "public": {
+    "source": "问仙录原创设定",
+    "description": "中洲边陲的一座小镇，偶有修士停留。",
+    "aliases": [
+      "青溪"
+    ]
+  },
+  "rules": {
+    "kind": "town",
+    "parent": "region:zhongzhou",
+    "danger": "safe",
+    "max_rarity": "uncommon",
+    "realm_range": [
+      "realm:fanren",
+      "realm:lianqi"
+    ],
+    "products": [],
+    "factions": []
+  },
+  "narration": {
+    "atmosphere": "沿河街巷里多是普通住户，早晚可听见集市叫卖。"
+  },
+  "secret": {
+    "notes": "仅为公开接口隔离验证准备的虚构说明，不是已发生的剧情。"
+  }
+}

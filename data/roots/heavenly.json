@@ -1,0 +1,34 @@
+{
+  "type": "root",
+  "key": "heavenly",
+  "name": "天灵根",
+  "phase": 1,
+  "public": {
+    "source": "通用修仙设定",
+    "description": "用于首轮格式评审的灵根类别；概率与速度仍为待审核草案。"
+  },
+  "rules": {
+    "kind": "heavenly",
+    "probability": 0.01,
+    "speed": "extreme",
+    "elements": [
+      [
+        "metal"
+      ],
+      [
+        "wood"
+      ],
+      [
+        "water"
+      ],
+      [
+        "fire"
+      ],
+      [
+        "earth"
+      ]
+    ]
+  },
+  "narration": {},
+  "secret": {}
+}

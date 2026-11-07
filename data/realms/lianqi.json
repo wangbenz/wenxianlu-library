@@ -1,0 +1,84 @@
+{
+  "type": "realm",
+  "key": "lianqi",
+  "name": "炼气",
+  "phase": 1,
+  "public": {
+    "source": "通用修仙设定",
+    "description": "初步吸纳灵气并积蓄法力的修行阶段。",
+    "usage": "学习基础吐纳与术法。",
+    "limitations": "法力积累有限，所学本领仍须分别掌握。"
+  },
+  "rules": {
+    "order": 1,
+    "detail": "full",
+    "stages": [
+      {
+        "key": "l1",
+        "name": "一层"
+      },
+      {
+        "key": "l2",
+        "name": "二层"
+      },
+      {
+        "key": "l3",
+        "name": "三层"
+      },
+      {
+        "key": "l4",
+        "name": "四层"
+      },
+      {
+        "key": "l5",
+        "name": "五层"
+      },
+      {
+        "key": "l6",
+        "name": "六层"
+      },
+      {
+        "key": "l7",
+        "name": "七层"
+      },
+      {
+        "key": "l8",
+        "name": "八层"
+      },
+      {
+        "key": "l9",
+        "name": "九层"
+      },
+      {
+        "key": "perfect",
+        "name": "大圆满"
+      }
+    ],
+    "lifespan_years": 120,
+    "can": [
+      "sense_qi",
+      "absorb_qi",
+      "basic_spell",
+      "use_low_artifact"
+    ],
+    "cannot": [
+      "weapon_flight",
+      "spiritual_sense"
+    ],
+    "breakthrough": {
+      "requires": [
+        "has_root",
+        "learned_entry_art",
+        "first_qi_absorption"
+      ],
+      "aids": [],
+      "risk": {
+        "outcome": "qi_backlash",
+        "severity": "minor",
+        "recoverable": true
+      }
+    }
+  },
+  "narration": {},
+  "secret": {}
+}
