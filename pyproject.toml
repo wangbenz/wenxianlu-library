@@ -1,0 +1,25 @@
+[project]
+name = "wenxianlu-library"
+version = "0.3.0"
+requires-python = "==3.11.*"
+dependencies = [
+    "django>=5.2.16,<5.3",
+    "djangorestframework",
+    "django-filter",
+    "whitenoise",
+    "gunicorn",
+    "drf-spectacular[sidecar]",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-django",
+]
+
+[tool.uv]
+required-version = ">=0.10"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "server.settings"
+testpaths = ["cultivation/tests", "tests/library_mode"]

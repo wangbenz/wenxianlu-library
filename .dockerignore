@@ -1,0 +1,22 @@
+# Only the runtime sources and lock metadata enter the build context.
+**
+!pyproject.toml
+!uv.lock
+!LICENSE.md
+!manage.py
+!server/
+!server/__init__.py
+!server/settings.py
+!server/library_urls.py
+!server/wsgi.py
+!cultivation/
+!cultivation/**
+!data/
+!data/cultivation/
+!data/cultivation/**
+
+# Exclude Python caches and tests inside the selected source trees.
+**/__pycache__
+**/*.pyc
+**/*.pyo
+cultivation/tests

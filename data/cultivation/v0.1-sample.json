@@ -1,0 +1,18 @@
+{
+  "format_version": 1,
+  "realms": [
+    {"key": "lianqi-chuqi", "name": "炼气初期", "order": 1, "description": "炼气阶段的初期，仅用于本轮最低境界要求。", "source": "问仙录测试设定", "revision": 1},
+    {"key": "lianqi-zhongqi", "name": "炼气中期", "order": 2, "description": "炼气阶段的中期，不定义突破或属性计算。", "source": "问仙录测试设定", "revision": 1}
+  ],
+  "facility_types": [
+    {"key": "basic-alchemy-workshop", "name": "初级炼丹工坊", "description": "提供基础炼丹能力的设施类型，不代表具体地点。", "capabilities": ["basic_alchemy"], "source": "问仙录测试设定", "revision": 1}
+  ],
+  "items": [
+    {"key": "huichun-dan", "name": "回春丹", "type": "consumable", "description": "恢复二十点气血的消耗品定义；此处不执行治疗或库存结算。", "minimum_realm": "lianqi-chuqi", "effects": [{"type": "restore_hp", "amount": 20}], "source": "问仙录测试设定", "revision": 1},
+    {"key": "qingling-cao", "name": "青灵草", "type": "material", "description": "回春丹丹方使用的材料，无消耗品使用效果。", "minimum_realm": null, "effects": [], "source": "问仙录测试设定", "revision": 1},
+    {"key": "qinglu-hua", "name": "清露花", "type": "material", "description": "回春丹丹方使用的另一种材料，无消耗品使用效果。", "minimum_realm": null, "effects": [], "source": "问仙录测试设定", "revision": 1}
+  ],
+  "recipes": [
+    {"key": "huichun-dan-recipe", "name": "回春丹丹方", "description": "用两份青灵草和一份清露花，成功时产出两颗回春丹的测试配方。", "minimum_realm": "lianqi-chuqi", "facility_type": "basic-alchemy-workshop", "ingredients": [{"item": "qingling-cao", "quantity": 2}, {"item": "qinglu-hua", "quantity": 1}], "output_item": "huichun-dan", "output_quantity": 2, "source": "问仙录测试设定", "revision": 1}
+  ]
+}
