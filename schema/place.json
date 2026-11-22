@@ -69,7 +69,9 @@
             "sect_gate",
             "wild",
             "secret_realm",
-            "building"
+            "building",
+            "herb_garden",
+            "quiet_room"
           ]
         },
         "parent": {

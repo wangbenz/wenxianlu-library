@@ -67,3 +67,18 @@ def test_legacy_fixture_must_have_complete_mapping(data, tmp_path):
     mapping.write_text(json.dumps({"source_hash": fingerprint(payload), "entries": {}}))
     with pytest.raises(CatalogError, match="逐条覆盖"):
         migrate(legacy, data, mapping, tmp_path / "new-data", ROOT / "schema")
+
+
+@pytest.mark.parametrize("kind", ["market", "herb_garden", "quiet_room", "unknown"])
+def test_place_type_maps_to_a_kind_without_selecting_an_instance(data, tmp_path, kind):
+    legacy = {"format_version": 1, "place_types": [{"key": "legacy-kind"}]}
+    source, mapping = tmp_path / "legacy.json", tmp_path / "mapping.json"
+    source.write_text(json.dumps(legacy))
+    entries = {"place_types:legacy-kind": {"action": "place_kind", "kind": kind, "reason": "保留场所类型"}}
+    mapping.write_text(json.dumps({"source_hash": fingerprint(legacy), "entries": entries}))
+    if kind == "unknown":
+        with pytest.raises(CatalogError, match="有效的地点"):
+            migrate(source, data, mapping, tmp_path / "out", ROOT / "schema")
+    else:
+        report = migrate(source, data, mapping, tmp_path / "out", ROOT / "schema")
+        assert report["entries"] == entries

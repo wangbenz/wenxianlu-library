@@ -194,10 +194,10 @@ def _cross_validate(records: dict[str, dict], files: dict[str, str]) -> None:
             if low > high:
                 fail(file, field, "境界区间上下限颠倒")
         if record["type"] == "realm":
-            stages = [stage["key"] for stage in rules["stages"]]
+            stages = [stage["key"] for stage in rules.get("stages", ())]
             if len(stages) != len(set(stages)):
                 fail(file, "/rules/stages", "小阶段 key 必须唯一")
-            if set(rules["can"]) & set(rules["cannot"]):
+            if set(rules.get("can", ())) & set(rules.get("cannot", ())):
                 fail(file, "/rules/cannot", "能力不能同时允许和禁止")
         if record["type"] == "item" and rules["price"]["min"] > rules["price"]["max"]:
             fail(file, "/rules/price", "最低价格不能高于最高价格")
@@ -211,7 +211,7 @@ def _cross_validate(records: dict[str, dict], files: dict[str, str]) -> None:
                 if len(group) != ROOT_COUNTS[rules["kind"]] or not set(group) <= allowed:
                     fail(file, f"/rules/elements/{index}", "灵根种类与属性组合不符")
         if record["type"] == "character":
-            stages = records[rules["realm"]]["rules"]["stages"]
+            stages = records[rules["realm"]]["rules"].get("stages", ())
             if rules["stage"] not in {stage["key"] for stage in stages}:
                 fail(file, "/rules/stage", "小阶段不属于所引用境界")
         if record["type"] == "art" and rules["kind"] == "practice":

@@ -161,6 +161,35 @@ def test_future_entries_are_validated_but_not_indexed(data):
         load(data)
 
 
+def test_placeholder_realm_can_describe_region_without_defining_progression(data):
+    future = record(
+        "realm", "gold-core", {"order": 2, "detail": "placeholder"}, public={"description": "第三境"}
+    )
+    write(data, "realm", future)
+    edit(
+        data,
+        "regions/zhongzhou.json",
+        lambda r: r["rules"].update(realm_range=["realm:fanren", "realm:gold-core"]),
+    )
+    assert load(data).entry("realm:gold-core", public=False)["rules"] == {"order": 2, "detail": "placeholder"}
+    edit(data, "realms/gold-core.json", lambda r: r["rules"].update(can=["basic_spell"]))
+    with pytest.raises(CatalogError):
+        load(data)
+
+
+def test_items_can_use_the_same_place_kinds_as_locations(data):
+    def prop(kind):
+        return json.loads((ROOT / "schema" / f"{kind}.json").read_text())["properties"]["rules"]["properties"]
+
+    assert set(prop("place")["kind"]["enum"]) == set(prop("item")["found_in_kinds"]["items"]["enum"])
+    file = "items/spirit_stone/spirit-stone.json"
+    edit(data, file, lambda r: r["rules"].update(found_in_kinds=["market"]))
+    assert load(data).entry("item:spirit-stone", public=False)["rules"]["found_in_kinds"] == ["market"]
+    edit(data, file, lambda r: r["rules"].update(found_in_kinds=["unknown"]))
+    with pytest.raises(CatalogError):
+        load(data)
+
+
 def test_formatting_does_not_change_fingerprint(data):
     before = load(data)
     for path in data.rglob("*.json"):

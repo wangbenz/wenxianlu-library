@@ -110,7 +110,7 @@ uv run uvicorn library_service.api:create_app --factory --host 127.0.0.1 --port 
 
 ## 旧 JSON 资料迁移
 
-旧 starter 和工程样例保留在 `tests/fixtures/legacy/`，仅作迁移输入与兼容测试，不作为运行时内容。先起草新条目并审核，再逐条填写 replace 或 retire 映射；不得从旧中文说明猜测硬字段。
+旧 starter 和工程样例保留在 `tests/fixtures/legacy/`，仅作迁移输入与兼容测试，不作为运行时内容。先起草新条目并审核，再逐条填写 replace、place_kind 或 retire 映射；不得从旧中文说明猜测硬字段。
 
 ```bash
 uv run python -m library_service.migrate --legacy tests/fixtures/legacy/starter-v0.1.json --plan > /tmp/starter-plan.json
