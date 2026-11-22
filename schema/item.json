@@ -292,7 +292,6 @@
         "grade",
         "rarity",
         "realm",
-        "price",
         "obtain",
         "found_in",
         "stackable",
@@ -522,6 +521,22 @@
                 }
               }
             }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "obtain": {
+                "contains": {
+                  "const": "market"
+                }
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "price"
+            ]
           }
         }
       ]

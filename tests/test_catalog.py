@@ -190,6 +190,15 @@ def test_items_can_use_the_same_place_kinds_as_locations(data):
         load(data)
 
 
+def test_market_items_require_price_but_gifts_can_be_unpriced(data):
+    file = "items/spirit_stone/spirit-stone.json"
+    edit(data, file, lambda r: r["rules"].pop("price"))
+    with pytest.raises(CatalogError):
+        load(data)
+    edit(data, file, lambda r: r["rules"].update(obtain=["sect", "reward"]))
+    assert "price" not in load(data).entry("item:spirit-stone", public=False)["rules"]
+
+
 def test_formatting_does_not_change_fingerprint(data):
     before = load(data)
     for path in data.rglob("*.json"):
