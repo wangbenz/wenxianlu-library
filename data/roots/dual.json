@@ -1,0 +1,59 @@
+{
+  "type": "root",
+  "key": "dual",
+  "name": "双灵根",
+  "phase": 1,
+  "public": {
+    "source": "通用修仙设定",
+    "description": "用于首轮格式评审的灵根类别；概率与速度仍为待审核草案。"
+  },
+  "rules": {
+    "kind": "dual",
+    "probability": 0.1,
+    "speed": "fast",
+    "elements": [
+      [
+        "metal",
+        "wood"
+      ],
+      [
+        "metal",
+        "water"
+      ],
+      [
+        "metal",
+        "fire"
+      ],
+      [
+        "metal",
+        "earth"
+      ],
+      [
+        "wood",
+        "water"
+      ],
+      [
+        "wood",
+        "fire"
+      ],
+      [
+        "wood",
+        "earth"
+      ],
+      [
+        "water",
+        "fire"
+      ],
+      [
+        "water",
+        "earth"
+      ],
+      [
+        "fire",
+        "earth"
+      ]
+    ]
+  },
+  "narration": {},
+  "secret": {}
+}

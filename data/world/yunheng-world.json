@@ -1,0 +1,20 @@
+{
+  "type": "world",
+  "key": "yunheng-world",
+  "name": "云衡界（暂定）",
+  "phase": 1,
+  "public": {
+    "source": "问仙录原创设定",
+    "description": "山川间灵气流转，凡俗城镇与修行宗门往来。此为格式评审样例，尚未开放完整世界内容。"
+  },
+  "rules": {
+    "layers": [
+      "lower"
+    ],
+    "regions": [
+      "region:zhongzhou"
+    ]
+  },
+  "narration": {},
+  "secret": {}
+}
