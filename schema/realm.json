@@ -8,7 +8,7 @@
     },
     "key": {
       "type": "string",
-      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])",
       "maxLength": 80
     },
     "name": {
@@ -88,7 +88,7 @@
             "properties": {
               "key": {
                 "type": "string",
-                "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
               },
               "name": {
                 "type": "string",
@@ -189,7 +189,7 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
               },
               "minItems": 0,
               "maxItems": 100,

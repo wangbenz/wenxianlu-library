@@ -26,8 +26,14 @@ def test_public_projection_has_only_allowed_fields(complete, config):
         assert "不可泄露" not in response.text
         assert "沉静" not in response.text
         rows = client.get("/api/library/v1/public/entries", params={"kind": "event"}).json()
-        assert rows["results"][0]["public"] == {}
-        assert "truth" not in json.dumps(rows)
+        assert rows["results"] == [] and rows["count"] == 0
+        path = "/api/library/v1/public"
+        assert client.get(f"{path}/event/sample-event").status_code == 404
+        assert client.get(f"{path}/entries", params={"keys": "event:sample-event"}).status_code == 404
+        event = client.get(
+            "/api/library/v1/internal/event/sample-event", headers=headers(config.service_token)
+        )
+        assert event.status_code == 200 and event.json()["public"] == {}
 
 
 @pytest.mark.parametrize(
@@ -122,6 +128,20 @@ def test_reload_failure_preserves_old_snapshot(config):
             client.get("/api/library/v1/public/place/qingxi-town").json()["public"]["description"]
             == "新的说明"
         )
+
+
+def test_reload_rejects_malformed_parent_without_changing_snapshot(config):
+    with TestClient(create_app(config)) as client:
+        before = client.get("/health").json()["revision"]
+        edit(
+            config.data_root,
+            "places/qingxi-town.json",
+            lambda r: r["rules"].update(parent="region:zhongzhou\n"),
+        )
+        failed = client.post("/api/library/v1/ops/reload", headers=headers(config.reload_token))
+        assert failed.status_code == 409
+        assert failed.json()["detail"]["issues"][0]["field"] == "/rules/parent"
+        assert client.get("/health").json()["revision"] == before
 
 
 def test_reload_is_atomic_for_concurrent_readers(config, monkeypatch):

@@ -92,7 +92,11 @@ uv run uvicorn library_service.api:create_app --factory --host 127.0.0.1 --port 
 
 受保护接口使用 `Authorization: Bearer ...`。两个令牌不能互换。内部批量请求为 `{"keys":["realm:lianqi","item:spirit-stone"]}`，最多 100 个；缺失或未启用资料使整批失败，避免静默丢条。
 
+分页调用方应比对每页顶层的 `revision`。翻页期间版本发生变化时，丢弃已拼接的页面，从第一页重新读取。
+
 列表支持 kind、phase、重复 keys 参数、offset 和 limit（最大 100）；phase 不得请求未启用阶段。列表成功响应含 count/offset/limit/results 与版本标识。所有业务成功响应均含 revision、content_hash。
+
+资料服务部署在回环地址或仅游戏后端可访问的私网，由游戏端按命卷中已发现的条目转发给 H5。公网网关不应直通资料服务。公开列表、按编号查询和详情只收录 `public` 非空的条目；其名称、编号和公开身份也属于玩家可读内容。
 
 公开单条只返回 `type/key/name/phase/public/revision/content_hash`。H5 应通过游戏后端查询已见条目，玩家已知信息以命卷为准。公开审阅版中的 `secret` 均为空对象。权限测试使用虚构的隐藏内容。
 

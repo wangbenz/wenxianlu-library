@@ -8,7 +8,7 @@
     },
     "key": {
       "type": "string",
-      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])",
       "maxLength": 80
     },
     "name": {
@@ -76,11 +76,11 @@
         },
         "seat": {
           "type": "string",
-          "pattern": "^(?:place):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          "pattern": "^(?:place):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
         },
         "strongest_realm": {
           "type": "string",
-          "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
         },
         "recruit": {
           "type": "array",
@@ -91,7 +91,7 @@
                 "type": "array",
                 "items": {
                   "type": "string",
-                  "pattern": "^(?:root):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                  "pattern": "^(?:root):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
                 },
                 "minItems": 1,
                 "maxItems": 100,
@@ -130,7 +130,7 @@
                     "properties": {
                       "item": {
                         "type": "string",
-                        "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                        "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
                       },
                       "quantity": {
                         "type": "integer",
@@ -170,7 +170,7 @@
                     "properties": {
                       "item": {
                         "type": "string",
-                        "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                        "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
                       },
                       "quantity": {
                         "type": "integer",
@@ -210,7 +210,7 @@
                     "properties": {
                       "item": {
                         "type": "string",
-                        "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                        "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
                       },
                       "quantity": {
                         "type": "integer",
@@ -248,7 +248,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(?:art):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+            "pattern": "^(?:art):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
           },
           "minItems": 0,
           "maxItems": 100,
@@ -258,7 +258,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+            "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
           },
           "minItems": 0,
           "maxItems": 100,
@@ -268,7 +268,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(?:character):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+            "pattern": "^(?:character):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
           },
           "minItems": 0,
           "maxItems": 100,

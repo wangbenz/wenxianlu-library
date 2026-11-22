@@ -8,7 +8,7 @@
     },
     "key": {
       "type": "string",
-      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])",
       "maxLength": 80
     },
     "name": {
@@ -52,7 +52,7 @@
       "properties": {
         "pool": {
           "type": "string",
-          "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
         },
         "weight": {
           "type": "number",
@@ -65,7 +65,7 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "pattern": "^(?:place):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                "pattern": "^(?:place):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
               },
               "minItems": 1,
               "maxItems": 100,
@@ -75,7 +75,7 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
               },
               "minItems": 2,
               "maxItems": 2
@@ -100,7 +100,7 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "pattern": "^(?:character):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                "pattern": "^(?:character):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
               },
               "minItems": 0,
               "maxItems": 100,
@@ -110,7 +110,7 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+                "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
               },
               "minItems": 0,
               "maxItems": 100,

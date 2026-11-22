@@ -137,6 +137,7 @@ class Snapshot:
     """通过规范化字节保存数据；每次输出新对象，调用者不能修改内存事实。"""
 
     records: Mapping[str, bytes] = dataclass_field(repr=False)
+    public_keys: frozenset[str]
     hashes: Mapping[str, str]
     by_type: Mapping[str, tuple[str, ...]]
     by_phase: Mapping[int, tuple[str, ...]]
@@ -184,6 +185,10 @@ def _cross_validate(records: dict[str, dict], files: dict[str, str]) -> None:
                 fail(file, field, "引用不存在")
             if records[target]["phase"] > record["phase"]:
                 fail(file, field, "不能引用更晚阶段的资料")
+
+    # 地点树会沿其他条目的引用继续遍历，先确认整个文件集的引用有效。
+    for reference, record in records.items():
+        file, rules = files[reference], record["rules"]
         for value, field in _ranges(rules):
             low, high = (records[v]["rules"]["order"] for v in value)
             if low > high:
@@ -300,6 +305,7 @@ def load_catalog(data_root: Path, schema_root: Path, enabled_phase: int = 1) -> 
     hashes = {key: fingerprint(record) for key, record in active.items()}
     return Snapshot(
         records=MappingProxyType({key: canonical(record) for key, record in active.items()}),
+        public_keys=frozenset(key for key, record in active.items() if record["public"]),
         hashes=MappingProxyType(hashes),
         by_type=MappingProxyType(
             {kind: tuple(key for key, r in active.items() if r["type"] == kind) for kind in TYPES}
