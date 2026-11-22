@@ -1,0 +1,15 @@
+{
+  "type": "realm",
+  "key": "dacheng",
+  "name": "大乘",
+  "phase": 1,
+  "public": {
+    "description": "合体之后为大乘。"
+  },
+  "rules": {
+    "order": 8,
+    "detail": "placeholder"
+  },
+  "narration": {},
+  "secret": {}
+}

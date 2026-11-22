@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "basic-protection-talisman",
+  "name": "简式护身符",
+  "phase": 1,
+  "public": {
+    "description": "低阶符师绘制的简式护符，常供初入炼气者练习激发。",
+    "usage": "持符引入少量灵力，在冲击前把符护撑开。",
+    "limitations": "一道符只供一次激发。效力散去后，符纸可留作凭据。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "talisman",
+    "grade": "tier_1",
+    "rarity": "common",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 2,
+      "max": 3,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "craft",
+      "reward"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:tide-ink-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "protect",
+      "note": "激发后形成短暂护持，可在护持结束前主动收束。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "边缘只有两道回线，激发时纸角会卷起。"
+  },
+  "secret": {}
+}

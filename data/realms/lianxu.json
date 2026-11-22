@@ -1,0 +1,15 @@
+{
+  "type": "realm",
+  "key": "lianxu",
+  "name": "炼虚",
+  "phase": 1,
+  "public": {
+    "description": "化神之后为炼虚。"
+  },
+  "rules": {
+    "order": 6,
+    "detail": "placeholder"
+  },
+  "narration": {},
+  "secret": {}
+}

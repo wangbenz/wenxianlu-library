@@ -1,0 +1,26 @@
+{
+  "type": "place",
+  "key": "duqiao-inn",
+  "name": "渡桥客栈",
+  "phase": 1,
+  "public": {
+    "description": "靠渡口的两层木楼。赶早渡的人可托店家留灯，房钱、押金和代存物件都写在柜上的木牌里。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "building",
+    "parent": "place:qingxi-town",
+    "danger": "safe",
+    "max_rarity": "common",
+    "realm_range": [
+      "realm:fanren",
+      "realm:lianqi"
+    ],
+    "products": [],
+    "factions": []
+  },
+  "narration": {
+    "atmosphere": "柜前挂满系绳的房牌，雨夜楼梯最下一级总有水。"
+  },
+  "secret": {}
+}

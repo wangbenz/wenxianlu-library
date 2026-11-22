@@ -1,0 +1,67 @@
+{
+  "type": "realm",
+  "key": "zhuji",
+  "name": "筑基",
+  "phase": 1,
+  "public": {
+    "description": "筑基修士体内已有稳固的灵力根基，能修习神识与御器飞行之法，寿元约二百二十年。",
+    "usage": "稳固根基后可习神识运用，修习御器飞行，并学习适用的中品法器操持法。",
+    "limitations": "神识、飞行和驾驭法器各需学习。筑基丹只辅助行气与稳固根基。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "order": 2,
+    "detail": "full",
+    "stages": [
+      {
+        "key": "early",
+        "name": "初期"
+      },
+      {
+        "key": "middle",
+        "name": "中期"
+      },
+      {
+        "key": "late",
+        "name": "后期"
+      },
+      {
+        "key": "perfect",
+        "name": "大圆满"
+      }
+    ],
+    "lifespan_years": 220,
+    "can": [
+      "sense_qi",
+      "absorb_qi",
+      "basic_spell",
+      "use_low_artifact",
+      "use_mid_artifact",
+      "weapon_flight",
+      "spiritual_sense"
+    ],
+    "cannot": [
+      "core_formation",
+      "nascent_soul",
+      "ascension"
+    ],
+    "breakthrough": {
+      "requires": [
+        "previous_realm_complete",
+        "has_breakthrough_method",
+        "resources_prepared"
+      ],
+      "aids": [
+        "item:zhuji-dan",
+        "item:qingling-dan"
+      ],
+      "risk": {
+        "outcome": "meridian_strain",
+        "severity": "moderate",
+        "recoverable": true
+      }
+    }
+  },
+  "narration": {},
+  "secret": {}
+}

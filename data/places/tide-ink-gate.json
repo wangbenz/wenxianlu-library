@@ -1,0 +1,32 @@
+{
+  "type": "place",
+  "key": "tide-ink-gate",
+  "name": "汀墨观山门（暂定）",
+  "phase": 1,
+  "public": {
+    "description": "芦汀尽头的旧观，水涨时靠木栈道往返。观中晾符纸的竹排常能从河对岸看见。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "sect_gate",
+    "parent": "place:lu-shui",
+    "danger": "safe",
+    "max_rarity": "uncommon",
+    "realm_range": [
+      "realm:fanren",
+      "realm:zhuji"
+    ],
+    "products": [
+      "item:blank-talisman-paper",
+      "item:cinnabar-ink",
+      "item:lightstep-talisman"
+    ],
+    "factions": [
+      "faction:tide-ink-sect"
+    ]
+  },
+  "narration": {
+    "atmosphere": "纸张晒到近干时，廊下每隔几步便是一小盏压纸的瓷碟。"
+  },
+  "secret": {}
+}

@@ -1,0 +1,19 @@
+{
+  "type": "region",
+  "key": "east-sea-islands",
+  "name": "东海群岛",
+  "phase": 1,
+  "public": {
+    "description": "东海群岛散布在远海。岛民依潮历行船，岛上的修士也要靠海路交换丹材。船客传说，有些礁盘一年只在几次大退潮时露出水面。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm_range": [
+      "realm:jindan",
+      "realm:yuanying"
+    ],
+    "danger": "high"
+  },
+  "narration": {},
+  "secret": {}
+}

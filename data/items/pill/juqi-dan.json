@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "juqi-dan",
+  "name": "聚气丹",
+  "phase": 1,
+  "public": {
+    "description": "松炉谷常见的入门丹药。",
+    "usage": "在熟悉的行气法门下服用，再静坐炼化。",
+    "limitations": "服丹仍要行功，凡人难以炼化。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "pill",
+    "grade": "tier_1",
+    "rarity": "uncommon",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 3,
+      "max": 6,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect",
+      "craft"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:songlu-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "cultivation_boost",
+      "note": "辅助炼气修士吐纳时聚拢游散灵气。"
+    },
+    "side_effects": "接连服用容易令气息浮躁。"
+  },
+  "narration": {
+    "appearance": "浅褐小丸，掰开有干草味。"
+  },
+  "secret": {}
+}

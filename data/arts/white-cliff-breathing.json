@@ -1,0 +1,33 @@
+{
+  "type": "art",
+  "key": "white-cliff-breathing",
+  "name": "叠崖诀",
+  "phase": 1,
+  "public": {
+    "description": "白崖门传授的入门功法，练功时常借石阶计息。",
+    "usage": "把一段吐纳练稳后，再延长行气的段落。",
+    "limitations": "每段收息要清楚，带伤或急走时不要强行接下一段。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "practice",
+    "grade": "huang_mid",
+    "realm": "realm:lianqi",
+    "affinity": [
+      "earth",
+      "metal"
+    ],
+    "effect": {
+      "type": "cultivation_boost",
+      "note": "按逐段吐纳的方式稳住施力。"
+    },
+    "obtain": [
+      "sect"
+    ],
+    "max_realm": "realm:zhuji"
+  },
+  "narration": {
+    "casting": "练功者以足尖对准石阶边，吐息和落脚间留一拍。"
+  },
+  "secret": {}
+}

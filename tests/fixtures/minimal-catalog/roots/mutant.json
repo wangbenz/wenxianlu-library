@@ -1,0 +1,28 @@
+{
+  "type": "root",
+  "key": "mutant",
+  "name": "异灵根",
+  "phase": 1,
+  "public": {
+    "source": "通用修仙设定",
+    "description": "用于首轮格式评审的灵根类别；概率与速度仍为待审核草案。"
+  },
+  "rules": {
+    "kind": "mutant",
+    "probability": 0.02,
+    "speed": "very_fast",
+    "elements": [
+      [
+        "wind"
+      ],
+      [
+        "thunder"
+      ],
+      [
+        "ice"
+      ]
+    ]
+  },
+  "narration": {},
+  "secret": {}
+}

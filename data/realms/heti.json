@@ -1,0 +1,15 @@
+{
+  "type": "realm",
+  "key": "heti",
+  "name": "合体",
+  "phase": 1,
+  "public": {
+    "description": "炼虚之后为合体。"
+  },
+  "rules": {
+    "order": 7,
+    "detail": "placeholder"
+  },
+  "narration": {},
+  "secret": {}
+}

@@ -1,0 +1,35 @@
+{
+  "type": "item",
+  "key": "entry-breathing-manual",
+  "name": "引气诀抄本",
+  "phase": 1,
+  "public": {
+    "description": "宗门传授引气诀时使用的手抄本，记有坐姿、吐纳次序和收功法。",
+    "usage": "得师门传授，或因一段机缘得到抄本后，可依诀研习。",
+    "limitations": "持有抄本只是有了学习材料，行气进度由实际练习决定。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "manual",
+    "grade": "huang_low",
+    "rarity": "uncommon",
+    "realm": "realm:fanren",
+    "obtain": [
+      "sect",
+      "reward"
+    ],
+    "found_in": [
+      "place:songlu-gate"
+    ],
+    "stackable": false,
+    "effect": {
+      "type": "utility",
+      "note": "记载引气诀的入门步骤，可作为请教与学习的依据。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "书角被多次翻白，有几页留着对照口授的点记。"
+  },
+  "secret": {}
+}

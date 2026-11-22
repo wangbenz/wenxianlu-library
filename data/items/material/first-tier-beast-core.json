@@ -1,0 +1,42 @@
+{
+  "type": "item",
+  "key": "first-tier-beast-core",
+  "name": "一阶妖丹",
+  "phase": 1,
+  "public": {
+    "description": "低阶妖兽体内偶尔凝成的晶核。",
+    "usage": "交易前查裂纹、余息和来源，辨明属性再入药或炼制。",
+    "limitations": "不能只凭色泽断定真伪。直接吞服有伤气脉的风险。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "material",
+    "grade": "tier_1",
+    "rarity": "uncommon",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 7,
+      "max": 14,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "monster",
+      "market"
+    ],
+    "found_in": [
+      "place:wan-yao-foothills",
+      "place:grey-awning-market"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "material",
+      "note": "供验性后按配方使用的妖兽材料。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "外层粗涩，真品的暗纹通常向中心收拢。"
+  },
+  "secret": {}
+}

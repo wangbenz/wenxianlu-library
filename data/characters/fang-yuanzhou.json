@@ -1,0 +1,23 @@
+{
+  "type": "character",
+  "key": "fang-yuanzhou",
+  "name": "方远舟",
+  "phase": 1,
+  "public": {
+    "description": "从前在石梁渡撑船。如今掌灯、管房牌，仍能凭水声估计晚渡会不会停。",
+    "identity": "渡桥客栈掌柜",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:fanren",
+    "stage": "mortal",
+    "location": "place:duqiao-inn",
+    "holdings": [],
+    "role": "innkeeper"
+  },
+  "narration": {
+    "personality": "热心熟客，对交到柜上的东西一律留票。",
+    "speech": "喜欢说清楚哪一更熄灯、哪一班船还在。"
+  },
+  "secret": {}
+}

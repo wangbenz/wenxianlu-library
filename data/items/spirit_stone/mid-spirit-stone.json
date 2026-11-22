@@ -1,0 +1,42 @@
+{
+  "type": "item",
+  "key": "mid-spirit-stone",
+  "name": "中品灵石",
+  "phase": 1,
+  "public": {
+    "description": "灵气凝得较紧，常用于较大宗的买卖。",
+    "usage": "一枚完好的中品灵石可兑一百枚下品灵石。",
+    "limitations": "灵气散失或石体破损时，需要单独验定品相。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "spirit_stone",
+    "grade": "mid",
+    "rarity": "rare",
+    "realm": "realm:zhuji",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 100,
+      "max": 100,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:white-cliff-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "currency",
+      "note": "完好灵石按品阶逐级一兑一百。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "透过边角能看见匀净的浅青色。"
+  },
+  "secret": {}
+}

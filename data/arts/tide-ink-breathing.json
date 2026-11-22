@@ -1,0 +1,33 @@
+{
+  "type": "art",
+  "key": "tide-ink-breathing",
+  "name": "分汀诀",
+  "phase": 1,
+  "public": {
+    "description": "汀墨观教初学者先辨气路、再练制符时的灵力控制。",
+    "usage": "沿熟记的三段气路慢行，到末段才归息。",
+    "limitations": "气息尚乱时应先归息。练熟气路只是制符的准备。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "practice",
+    "grade": "huang_mid",
+    "realm": "realm:lianqi",
+    "affinity": [
+      "water",
+      "wood"
+    ],
+    "effect": {
+      "type": "cultivation_boost",
+      "note": "练习把一股散乱灵气理顺后再收束。"
+    },
+    "obtain": [
+      "sect"
+    ],
+    "max_realm": "realm:zhuji"
+  },
+  "narration": {
+    "casting": "练者时常在腿上敲三下，把每次收息分开记。"
+  },
+  "secret": {}
+}

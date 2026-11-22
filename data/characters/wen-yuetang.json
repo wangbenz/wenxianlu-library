@@ -1,0 +1,27 @@
+{
+  "type": "character",
+  "key": "wen-yuetang",
+  "name": "闻月棠",
+  "phase": 1,
+  "public": {
+    "description": "在两岸送信，认得不同摊位包纸的手法。领人过栈道时会先看水面浮草往哪走。",
+    "identity": "汀墨观引路弟子",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:lianqi",
+    "stage": "l4",
+    "location": "place:tide-ink-gate",
+    "holdings": [
+      "item:lightstep-talisman",
+      "item:blank-talisman-paper"
+    ],
+    "role": "guide",
+    "faction": "faction:tide-ink-sect"
+  },
+  "narration": {
+    "personality": "对新路线好奇，见有人落水会先丢绳。",
+    "speech": "喜欢把方向说成顺水和逆水。"
+  },
+  "secret": {}
+}

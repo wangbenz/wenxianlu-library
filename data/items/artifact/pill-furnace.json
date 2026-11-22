@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "pill-furnace",
+  "name": "丹炉",
+  "phase": 1,
+  "public": {
+    "description": "有通气孔与观火缝的小丹炉。",
+    "usage": "按已知丹方准备材料，控温时留意炉声与火色。",
+    "limitations": "炉膛积垢、配方有误或火候失控，都可能毁掉一炉药。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "artifact",
+    "grade": "low_artifact",
+    "rarity": "uncommon",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 12,
+      "max": 22,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect",
+      "craft"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:songlu-gate"
+    ],
+    "stackable": false,
+    "effect": {
+      "type": "utility",
+      "note": "供已掌握火候和配方的炼丹者调火。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "青铜外壁常有松烟熏出的薄层。"
+  },
+  "secret": {}
+}

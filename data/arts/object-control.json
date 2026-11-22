@@ -1,0 +1,33 @@
+{
+  "type": "art",
+  "key": "object-control",
+  "name": "御物术",
+  "phase": 1,
+  "public": {
+    "description": "引一缕灵力牵动近处小物。",
+    "usage": "从能看清、拿得稳的物件练起，先试抬起再练转向。",
+    "limitations": "重物、被牢固固定的物件和他人正在掌控的东西会更难牵动。",
+    "source": "通用修仙设定",
+    "aliases": [
+      "控物术"
+    ]
+  },
+  "rules": {
+    "kind": "spell",
+    "grade": "huang_low",
+    "realm": "realm:lianqi",
+    "affinity": [],
+    "effect": {
+      "type": "utility",
+      "note": "在短距离内牵引合适重量的小件。"
+    },
+    "obtain": [
+      "sect",
+      "market"
+    ]
+  },
+  "narration": {
+    "casting": "指尖先点向落点，再用短促的回腕控制移动。"
+  },
+  "secret": {}
+}

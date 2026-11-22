@@ -1,0 +1,88 @@
+{
+  "type": "faction",
+  "key": "white-cliff-sect",
+  "name": "白崖门（暂定）",
+  "phase": 1,
+  "public": {
+    "description": "三门里人手最多。领门中供给的人要巡路、护送与轮值。外门考核常叫人带着重物走一段山路，执事既看脚力，也看人肯不肯等落在后面的同伴。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "sect",
+    "seat": "place:white-cliff-gate",
+    "strongest_realm": "realm:jindan",
+    "recruit": [
+      {
+        "roots": [
+          "root:heavenly",
+          "root:mutant"
+        ],
+        "rank": "inner"
+      },
+      {
+        "roots": [
+          "root:dual",
+          "root:triple"
+        ],
+        "rank": "outer"
+      },
+      {
+        "roots": [
+          "root:quad"
+        ],
+        "rank": "servant"
+      },
+      {
+        "roots": [
+          "root:penta"
+        ],
+        "rank": "reject"
+      }
+    ],
+    "ranks": {
+      "inner": {
+        "monthly": [
+          {
+            "item": "item:spirit-stone",
+            "quantity": 6
+          }
+        ],
+        "duties": "随门中教习修练并领固定巡山差。"
+      },
+      "outer": {
+        "monthly": [
+          {
+            "item": "item:spirit-stone",
+            "quantity": 3
+          }
+        ],
+        "duties": "巡守石阶外道，按排班护送来往门人。"
+      },
+      "servant": {
+        "monthly": [
+          {
+            "item": "item:spirit-stone",
+            "quantity": 1
+          }
+        ],
+        "duties": "修整路桩和石阶，交班前交回工具。"
+      }
+    },
+    "arts": [
+      "art:white-cliff-breathing",
+      "art:object-control"
+    ],
+    "specialties": [
+      "item:protective-talisman",
+      "item:low-flying-sword"
+    ],
+    "characters": [
+      "character:ke-wenliang",
+      "character:shen-zhaochuan"
+    ]
+  },
+  "narration": {
+    "style": "公事多写在石阶下的榜上。执事讲话直，账册里连替谁顶过一班都记。"
+  },
+  "secret": {}
+}

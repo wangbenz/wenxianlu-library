@@ -1,0 +1,27 @@
+{
+  "type": "character",
+  "key": "liang-jianwei",
+  "name": "梁见微",
+  "phase": 1,
+  "public": {
+    "description": "负责带人查符纸和安排入观轮值，常带一根量潮用的尺。",
+    "identity": "汀墨观收徒执事",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:zhuji",
+    "stage": "early",
+    "location": "place:tide-ink-gate",
+    "holdings": [
+      "item:teaching-jade",
+      "item:lightstep-talisman"
+    ],
+    "role": "recruiter",
+    "faction": "faction:tide-ink-sect"
+  },
+  "narration": {
+    "personality": "遇上临时改潮期会改安排，遇到说不清的账仍坚持当面核对。",
+    "speech": "开口先讲什么时候要回船。"
+  },
+  "secret": {}
+}

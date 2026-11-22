@@ -1,0 +1,15 @@
+{
+  "type": "realm",
+  "key": "dujie",
+  "name": "渡劫",
+  "phase": 1,
+  "public": {
+    "description": "大乘之后为渡劫。"
+  },
+  "rules": {
+    "order": 9,
+    "detail": "placeholder"
+  },
+  "narration": {},
+  "secret": {}
+}

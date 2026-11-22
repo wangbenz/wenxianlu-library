@@ -1,0 +1,19 @@
+{
+  "type": "region",
+  "key": "demon-territory",
+  "name": "魔域",
+  "phase": 1,
+  "public": {
+    "description": "魔域是魔修聚居的西部荒原。往来商队沿水源穿行，各家能走的路段不同，出了商道便少有可靠的地图。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm_range": [
+      "realm:huashen",
+      "realm:dujie"
+    ],
+    "danger": "high"
+  },
+  "narration": {},
+  "secret": {}
+}

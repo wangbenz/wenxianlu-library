@@ -1,0 +1,26 @@
+{
+  "type": "place",
+  "key": "nan-cen",
+  "name": "南岑国",
+  "phase": 1,
+  "public": {
+    "description": "中洲东南的小国。朝廷在平地征粮、修堤，山里的宗门照自家规矩收徒。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "country",
+    "parent": "region:zhongzhou",
+    "danger": "low",
+    "max_rarity": "uncommon",
+    "realm_range": [
+      "realm:fanren",
+      "realm:lianqi"
+    ],
+    "products": [],
+    "factions": []
+  },
+  "narration": {
+    "atmosphere": "驿站的木板上，告示先贴河工工钱，再贴各郡征粮。"
+  },
+  "secret": {}
+}

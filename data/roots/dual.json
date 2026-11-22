@@ -4,8 +4,8 @@
   "name": "双灵根",
   "phase": 1,
   "public": {
-    "source": "通用修仙设定",
-    "description": "用于首轮格式评审的灵根类别；概率与速度仍为待审核草案。"
+    "description": "有两种五行属性。可择一门先练，兼修时还得分配时间和灵力。",
+    "source": "通用修仙设定"
   },
   "rules": {
     "kind": "dual",

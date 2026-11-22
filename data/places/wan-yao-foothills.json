@@ -1,0 +1,29 @@
+{
+  "type": "place",
+  "key": "wan-yao-foothills",
+  "name": "万妖山外围",
+  "phase": 1,
+  "public": {
+    "description": "万妖山南麓最靠近商道的一段。低处有采药人留的路标，天黑前容易沿原路返回，雨后有些记号会被冲掉。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "wild",
+    "parent": "region:wan-yao-mountains",
+    "danger": "high",
+    "max_rarity": "uncommon",
+    "realm_range": [
+      "realm:fanren",
+      "realm:zhuji"
+    ],
+    "products": [
+      "item:chiyang-flower",
+      "item:first-tier-beast-core"
+    ],
+    "factions": []
+  },
+  "narration": {
+    "atmosphere": "山壁阴面长着带红边的苔，湿石上常能看见新鲜爪痕。"
+  },
+  "secret": {}
+}

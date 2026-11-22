@@ -1,0 +1,34 @@
+{
+  "type": "art",
+  "key": "basic-breathing",
+  "name": "引气诀",
+  "phase": 1,
+  "public": {
+    "description": "用短息试探灵气、用长息收功的通行入门功。",
+    "usage": "可经宗门传授，也可凭机缘得到抄本后自行研读。初学先练坐姿与收功。",
+    "limitations": "无须先成为炼气修士才可学习，实际引气仍须具备灵根并练成。",
+    "source": "通用修仙设定",
+    "aliases": [
+      "基础吐纳功"
+    ]
+  },
+  "rules": {
+    "kind": "practice",
+    "grade": "huang_low",
+    "realm": "realm:fanren",
+    "affinity": [],
+    "effect": {
+      "type": "cultivation_boost",
+      "note": "帮助初学者察觉灵气、尝试引气入体。"
+    },
+    "obtain": [
+      "sect",
+      "reward"
+    ],
+    "max_realm": "realm:lianqi"
+  },
+  "narration": {
+    "casting": "行气前先把双手放在膝上，收功时慢慢松肩。"
+  },
+  "secret": {}
+}

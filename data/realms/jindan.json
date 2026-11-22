@@ -1,0 +1,15 @@
+{
+  "type": "realm",
+  "key": "jindan",
+  "name": "金丹",
+  "phase": 1,
+  "public": {
+    "description": "筑基之后为金丹。"
+  },
+  "rules": {
+    "order": 3,
+    "detail": "placeholder"
+  },
+  "narration": {},
+  "secret": {}
+}

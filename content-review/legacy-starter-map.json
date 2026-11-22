@@ -1,0 +1,100 @@
+{
+  "source_hash": "ebe5b9b94ec2a9925d61cbc35b0f8486c9ab01e3ebb9beabe281889581ee5964",
+  "entries": {
+    "realms:lianqi": {
+      "action": "replace",
+      "target": "realm:lianqi",
+      "reason": "保留原 key，按新格式补齐阶段和适用范围。"
+    },
+    "realms:zhuji": {
+      "action": "replace",
+      "target": "realm:zhuji",
+      "reason": "保留原 key，按新格式补齐阶段和适用范围。"
+    },
+    "items:spirit-stone": {
+      "action": "replace",
+      "target": "item:spirit-stone",
+      "reason": "保留原 key，将入门计价资料具体化为下品灵石。"
+    },
+    "items:blank-talisman-paper": {
+      "action": "replace",
+      "target": "item:blank-talisman-paper",
+      "reason": "保留原 key，按新格式补齐公开说明、适用条件和取得途径。"
+    },
+    "items:cinnabar-ink": {
+      "action": "replace",
+      "target": "item:cinnabar-ink",
+      "reason": "保留原 key，按新格式补齐公开说明、适用条件和取得途径。"
+    },
+    "items:medicinal-spirit-herb": {
+      "action": "replace",
+      "target": "item:medicinal-spirit-herb",
+      "reason": "保留原 key，将入门药用灵草具体化为青灵草。"
+    },
+    "items:pill-furnace": {
+      "action": "replace",
+      "target": "item:pill-furnace",
+      "reason": "保留原 key，按新格式补齐公开说明、适用条件和取得途径。"
+    },
+    "items:teaching-jade": {
+      "action": "replace",
+      "target": "item:teaching-jade",
+      "reason": "保留原 key，按新格式补齐公开说明、适用条件和取得途径。"
+    },
+    "items:storage-pouch": {
+      "action": "replace",
+      "target": "item:storage-pouch",
+      "reason": "保留原 key，按新格式补齐公开说明、适用条件和取得途径。"
+    },
+    "items:protective-talisman": {
+      "action": "replace",
+      "target": "item:protective-talisman",
+      "reason": "保留原 key，按新格式补齐公开说明、适用条件和取得途径。"
+    },
+    "items:fasting-pill": {
+      "action": "replace",
+      "target": "item:fasting-pill",
+      "reason": "保留原 key，用辟谷丹作为显示名，保留辟谷丸为别名。"
+    },
+    "items:basic-protection-talisman": {
+      "action": "replace",
+      "target": "item:basic-protection-talisman",
+      "reason": "保留原 key，按新格式补齐公开说明、适用条件和取得途径。"
+    },
+    "arts:basic-breathing": {
+      "action": "replace",
+      "target": "art:basic-breathing",
+      "reason": "保留原 key，用引气诀作为显示名，保留基础吐纳功为别名。"
+    },
+    "arts:object-control": {
+      "action": "replace",
+      "target": "art:object-control",
+      "reason": "保留原 key，用御物术作为显示名，保留控物术为别名。"
+    },
+    "arts:firebolt": {
+      "action": "replace",
+      "target": "art:firebolt",
+      "reason": "保留原 key，用火球术作为显示名，保留火弹术为别名。"
+    },
+    "arts:heaven-eye": {
+      "action": "replace",
+      "target": "art:heaven-eye",
+      "reason": "保留原 key，按新格式补齐阶段和适用范围。"
+    },
+    "place_types:herb-garden": {
+      "action": "place_kind",
+      "kind": "herb_garden",
+      "reason": "旧编号表示可在多地出现的场所类型，保留为地点分类。"
+    },
+    "place_types:quiet-chamber": {
+      "action": "place_kind",
+      "kind": "quiet_room",
+      "reason": "旧编号表示可在多地出现的场所类型，保留为地点分类。"
+    },
+    "place_types:cultivator-market": {
+      "action": "place_kind",
+      "kind": "market",
+      "reason": "旧编号表示可在多地出现的场所类型，保留为地点分类。"
+    }
+  }
+}

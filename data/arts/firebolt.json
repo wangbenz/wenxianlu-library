@@ -1,0 +1,35 @@
+{
+  "type": "art",
+  "key": "firebolt",
+  "name": "火球术",
+  "phase": 1,
+  "public": {
+    "description": "炼气修士常练的短程火术。",
+    "usage": "确认落点后凝火抛出，也可按情形用于引火。",
+    "limitations": "雨中和湿物上效果有限，易燃杂物可能扩大火势。",
+    "source": "通用修仙设定",
+    "aliases": [
+      "火弹术"
+    ]
+  },
+  "rules": {
+    "kind": "spell",
+    "grade": "huang_low",
+    "realm": "realm:lianqi",
+    "affinity": [
+      "fire"
+    ],
+    "effect": {
+      "type": "attack",
+      "note": "把一小股火势送向近处目标。"
+    },
+    "obtain": [
+      "sect",
+      "market"
+    ]
+  },
+  "narration": {
+    "casting": "掌边先起一点红，定住后才有拇指大的火团。"
+  },
+  "secret": {}
+}

@@ -1,0 +1,26 @@
+{
+  "type": "place",
+  "key": "lu-shui",
+  "name": "芦水郡",
+  "phase": 1,
+  "public": {
+    "description": "芦水郡沿支流分出数条商道。青溪一带靠摆渡和晒药营生，水涨时北岸常要绕行。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "county",
+    "parent": "place:nan-cen",
+    "danger": "low",
+    "max_rarity": "uncommon",
+    "realm_range": [
+      "realm:fanren",
+      "realm:lianqi"
+    ],
+    "products": [],
+    "factions": []
+  },
+  "narration": {
+    "atmosphere": "湿芦苇堆在路边，赶车人用竹竿探深浅。"
+  },
+  "secret": {}
+}

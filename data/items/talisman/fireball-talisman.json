@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "fireball-talisman",
+  "name": "火球符",
+  "phase": 1,
+  "public": {
+    "description": "能放出一团短促火势的符纸。",
+    "usage": "看清落点和下风处后再激发。",
+    "limitations": "遇湿不易起火，屋内、草垛旁和拥挤处容易误伤。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "talisman",
+    "grade": "tier_1",
+    "rarity": "uncommon",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 3,
+      "max": 6,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "craft",
+      "sect"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:tide-ink-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "attack",
+      "note": "激发时向近处放出一道短促火势。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "符纸中心一圈深红，透光可见压出的焦痕。"
+  },
+  "secret": {}
+}

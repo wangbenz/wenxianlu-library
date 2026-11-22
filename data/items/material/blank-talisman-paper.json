@@ -1,0 +1,48 @@
+{
+  "type": "item",
+  "key": "blank-talisman-paper",
+  "name": "空白符纸",
+  "phase": 1,
+  "public": {
+    "description": "掺过短韧纤维的纸，吸墨慢。",
+    "usage": "与合用丹砂配套，按已学符式绘制。符纸按张计价。",
+    "limitations": "受潮起毛后落笔容易断线。",
+    "source": "通用修仙设定",
+    "aliases": [
+      "符纸"
+    ]
+  },
+  "rules": {
+    "category": "material",
+    "grade": "tier_1",
+    "rarity": "common",
+    "realm": "realm:fanren",
+    "price": {
+      "currency": "silver",
+      "min": 0.1,
+      "max": 0.3,
+      "unit": "silver_liang"
+    },
+    "obtain": [
+      "market",
+      "craft",
+      "sect"
+    ],
+    "found_in": [
+      "place:tide-ink-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "material",
+      "note": "承载低阶符文的纸材。"
+    },
+    "side_effects": "",
+    "found_in_kinds": [
+      "market"
+    ]
+  },
+  "narration": {
+    "appearance": "浅黄，纸边有细细的芦纤维。"
+  },
+  "secret": {}
+}

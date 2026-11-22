@@ -1,0 +1,15 @@
+{
+  "type": "realm",
+  "key": "yuanying",
+  "name": "元婴",
+  "phase": 1,
+  "public": {
+    "description": "金丹之后为元婴。"
+  },
+  "rules": {
+    "order": 4,
+    "detail": "placeholder"
+  },
+  "narration": {},
+  "secret": {}
+}

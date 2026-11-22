@@ -4,15 +4,19 @@
   "name": "云衡界（暂定）",
   "phase": 1,
   "public": {
-    "source": "问仙录原创设定",
-    "description": "山川间灵气流转，凡俗城镇与修行宗门往来。此为格式评审样例，尚未开放完整世界内容。"
+    "description": "云衡界下界分为中洲、万妖山脉、东海群岛、魔域和北冥。凡人沿河流与海岸建国，修士循灵脉开辟洞府、立宗传法。各地宗门都传有渡劫飞升、通往上界的说法。",
+    "source": "问仙录原创设定"
   },
   "rules": {
     "layers": [
       "lower"
     ],
     "regions": [
-      "region:zhongzhou"
+      "region:zhongzhou",
+      "region:wan-yao-mountains",
+      "region:east-sea-islands",
+      "region:demon-territory",
+      "region:beiming"
     ]
   },
   "narration": {},

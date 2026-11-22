@@ -50,7 +50,7 @@ def record(kind, key, rules, *, phase=1, public=None, narration=None, secret=Non
 @pytest.fixture
 def data(tmp_path):
     root = tmp_path / "data"
-    shutil.copytree(ROOT / "data", root)
+    shutil.copytree(ROOT / "tests/fixtures/minimal-catalog", root)
     return root
 
 
@@ -96,7 +96,6 @@ def complete(data):
                 "arts": ["art:entry-art"],
                 "specialties": ["item:spirit-stone"],
                 "characters": ["character:guide"],
-                "visit_weight": 1,
             },
             narration={"style": "测试门风"},
             secret={"notes": "门派隐藏内容"},
@@ -128,7 +127,7 @@ def complete(data):
             "event",
             "sample-event",
             {
-                "pool": "qingxi-before-recruit",
+                "pool": "sample-pool",
                 "weight": 1,
                 "trigger": {
                     "places": ["place:qingxi-town"],

@@ -1,0 +1,15 @@
+{
+  "type": "realm",
+  "key": "huashen",
+  "name": "化神",
+  "phase": 1,
+  "public": {
+    "description": "元婴之后为化神。"
+  },
+  "rules": {
+    "order": 5,
+    "detail": "placeholder"
+  },
+  "narration": {},
+  "secret": {}
+}

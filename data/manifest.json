@@ -6,29 +6,99 @@
       "world/yunheng-world.json"
     ],
     "region": [
+      "regions/beiming.json",
+      "regions/demon-territory.json",
+      "regions/east-sea-islands.json",
+      "regions/wan-yao-mountains.json",
       "regions/zhongzhou.json"
     ],
     "place": [
-      "places/qingxi-town.json"
+      "places/duqiao-inn.json",
+      "places/grey-awning-market.json",
+      "places/hesheng-apothecary.json",
+      "places/lu-shui.json",
+      "places/market-quiet-room.json",
+      "places/nan-cen.json",
+      "places/qingxi-town.json",
+      "places/reed-bank-herb-garden.json",
+      "places/shallow-vault.json",
+      "places/songlu-gate.json",
+      "places/tide-ink-gate.json",
+      "places/wan-yao-foothills.json",
+      "places/white-cliff-gate.json"
     ],
     "realm": [
+      "realms/dacheng.json",
+      "realms/dujie.json",
       "realms/fanren.json",
-      "realms/lianqi.json"
+      "realms/heti.json",
+      "realms/huashen.json",
+      "realms/jindan.json",
+      "realms/lianqi.json",
+      "realms/lianxu.json",
+      "realms/yuanying.json",
+      "realms/zhuji.json"
     ],
     "root": [
+      "roots/dual.json",
       "roots/heavenly.json",
       "roots/mutant.json",
-      "roots/dual.json",
-      "roots/triple.json",
+      "roots/penta.json",
       "roots/quad.json",
-      "roots/penta.json"
+      "roots/triple.json"
     ],
     "item": [
-      "items/spirit_stone/spirit-stone.json"
+      "items/artifact/low-flying-sword.json",
+      "items/artifact/pill-furnace.json",
+      "items/artifact/protective-jade.json",
+      "items/artifact/storage-pouch.json",
+      "items/herb/chiyang-flower.json",
+      "items/herb/medicinal-spirit-herb.json",
+      "items/manual/entry-breathing-manual.json",
+      "items/manual/teaching-jade.json",
+      "items/material/blank-talisman-paper.json",
+      "items/material/cinnabar-ink.json",
+      "items/material/first-tier-beast-core.json",
+      "items/pill/fasting-pill.json",
+      "items/pill/huichun-dan.json",
+      "items/pill/juqi-dan.json",
+      "items/pill/qingling-dan.json",
+      "items/pill/zhuji-dan.json",
+      "items/spirit_stone/mid-spirit-stone.json",
+      "items/spirit_stone/spirit-stone.json",
+      "items/talisman/basic-protection-talisman.json",
+      "items/talisman/fireball-talisman.json",
+      "items/talisman/lightstep-talisman.json",
+      "items/talisman/protective-talisman.json"
     ],
-    "art": [],
-    "faction": [],
-    "character": [],
+    "art": [
+      "arts/basic-breathing.json",
+      "arts/firebolt.json",
+      "arts/heaven-eye.json",
+      "arts/lightstep.json",
+      "arts/object-control.json",
+      "arts/songlu-breathing.json",
+      "arts/tide-ink-breathing.json",
+      "arts/white-cliff-breathing.json"
+    ],
+    "faction": [
+      "factions/grey-awning-traders.json",
+      "factions/songlu-sect.json",
+      "factions/tide-ink-sect.json",
+      "factions/white-cliff-sect.json"
+    ],
+    "character": [
+      "characters/fang-yuanzhou.json",
+      "characters/jiang-lusheng.json",
+      "characters/ke-wenliang.json",
+      "characters/liang-jianwei.json",
+      "characters/lu-qiuhe.json",
+      "characters/ning-xiaoman.json",
+      "characters/shen-zhaochuan.json",
+      "characters/tang-caiheng.json",
+      "characters/wen-jingting.json",
+      "characters/wen-yuetang.json"
+    ],
     "event": []
   }
 }

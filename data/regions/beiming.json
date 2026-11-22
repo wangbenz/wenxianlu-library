@@ -1,0 +1,19 @@
+{
+  "type": "region",
+  "key": "beiming",
+  "name": "北冥",
+  "phase": 1,
+  "public": {
+    "description": "北冥地处极北，冰河入海，冬季封冻。当地船家说，冰下有几道常年不冻的温流，每年开春都得重新探路。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm_range": [
+      "realm:huashen",
+      "realm:dujie"
+    ],
+    "danger": "high"
+  },
+  "narration": {},
+  "secret": {}
+}

@@ -4,8 +4,8 @@
   "name": "三灵根",
   "phase": 1,
   "public": {
-    "source": "通用修仙设定",
-    "description": "用于首轮格式评审的灵根类别；概率与速度仍为待审核草案。"
+    "description": "有三种五行属性，常能在不同法门里找到可用之处。起步时宜先练熟一门。",
+    "source": "通用修仙设定"
   },
   "rules": {
     "kind": "triple",

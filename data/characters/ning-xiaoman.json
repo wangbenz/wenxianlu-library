@@ -1,0 +1,25 @@
+{
+  "type": "character",
+  "key": "ning-xiaoman",
+  "name": "宁小满",
+  "phase": 1,
+  "public": {
+    "description": "在药圃修闸、剪草，熟悉每段圃埂。每天收工会把割过的垄记在两截芦管上。",
+    "identity": "芦湾药圃帮工",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:fanren",
+    "stage": "mortal",
+    "location": "place:reed-bank-herb-garden",
+    "holdings": [
+      "item:medicinal-spirit-herb"
+    ],
+    "role": "resident"
+  },
+  "narration": {
+    "personality": "怕被人说偷懒，遇到水快漫埂时肯直说自己一个人顾不过来。",
+    "speech": "说话先指方向，再报哪一垄。"
+  },
+  "secret": {}
+}

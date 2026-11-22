@@ -1,0 +1,44 @@
+{
+  "type": "item",
+  "key": "storage-pouch",
+  "name": "储物袋",
+  "phase": 1,
+  "public": {
+    "description": "袋口系有导气扣的小型储物法器。",
+    "usage": "以灵力开扣，取放前确认物件尺寸与袋内余量。",
+    "limitations": "活物不能收入，损坏的扣结可能无法开启。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "artifact",
+    "grade": "low_artifact",
+    "rarity": "uncommon",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 10,
+      "max": 18,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect",
+      "craft"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:white-cliff-gate",
+      "place:tide-ink-gate"
+    ],
+    "stackable": false,
+    "effect": {
+      "type": "storage",
+      "note": "收纳适合袋口与容量的无生命小件。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "麻灰色袋身，解扣时能看见里衬闪过一道暗光。"
+  },
+  "secret": {}
+}

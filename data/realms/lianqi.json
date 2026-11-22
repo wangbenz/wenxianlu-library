@@ -4,10 +4,10 @@
   "name": "炼气",
   "phase": 1,
   "public": {
-    "source": "通用修仙设定",
-    "description": "初步吸纳灵气并积蓄法力的修行阶段。",
-    "usage": "学习基础吐纳与术法。",
-    "limitations": "法力积累有限，所学本领仍须分别掌握。"
+    "description": "引气入体后便入炼气。修士可蓄积灵力，学简单术法，驱使下品法器，寿元约一百二十年。",
+    "usage": "由师承或典籍习得入门功法，练习简单术法，按所学使用下品法器。",
+    "limitations": "无法御器载人飞行。低层功法、术法和法器各有适用条件。",
+    "source": "通用修仙设定"
   },
   "rules": {
     "order": 1,
@@ -63,7 +63,8 @@
     ],
     "cannot": [
       "weapon_flight",
-      "spiritual_sense"
+      "spiritual_sense",
+      "core_formation"
     ],
     "breakthrough": {
       "requires": [

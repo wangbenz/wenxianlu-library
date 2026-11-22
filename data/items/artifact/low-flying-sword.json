@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "low-flying-sword",
+  "name": "下品飞剑",
+  "phase": 1,
+  "public": {
+    "description": "短脊直剑，剑柄内刻有导气纹。",
+    "usage": "学会御物后，可在短距离内练习收放和转向。",
+    "limitations": "炼气时只适合近处御使剑身。御剑载人另有门槛。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "artifact",
+    "grade": "low_artifact",
+    "rarity": "uncommon",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 16,
+      "max": 26,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect",
+      "craft"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:white-cliff-gate"
+    ],
+    "stackable": false,
+    "effect": {
+      "type": "attack",
+      "note": "熟练者可在近处御使剑身。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "剑锋较窄，导气时柄上会浮起白线。"
+  },
+  "secret": {}
+}
