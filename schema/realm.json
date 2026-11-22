@@ -60,9 +60,7 @@
         }
       },
       "required": [
-        "description",
-        "usage",
-        "limitations"
+        "description"
       ],
       "additionalProperties": false
     },
@@ -237,11 +235,7 @@
       },
       "required": [
         "order",
-        "detail",
-        "stages",
-        "lifespan_years",
-        "can",
-        "cannot"
+        "detail"
       ],
       "additionalProperties": false,
       "allOf": [
@@ -261,6 +255,23 @@
               "cannot": {
                 "minItems": 1
               }
+            },
+            "required": [
+              "stages",
+              "lifespan_years",
+              "can",
+              "cannot"
+            ]
+          },
+          "else": {
+            "properties": {
+              "can": {
+                "maxItems": 0
+              },
+              "cannot": {
+                "maxItems": 0
+              },
+              "breakthrough": false
             }
           }
         }
@@ -289,5 +300,31 @@
     "narration",
     "secret"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "rules": {
+            "properties": {
+              "detail": {
+                "const": "full"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "public": {
+            "required": [
+              "description",
+              "usage",
+              "limitations"
+            ]
+          }
+        }
+      }
+    }
+  ]
 }

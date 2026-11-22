@@ -264,6 +264,27 @@
         "side_effects": {
           "type": "string",
           "maxLength": 1000
+        },
+        "found_in_kinds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "country",
+              "mountain",
+              "sea",
+              "county",
+              "town",
+              "market",
+              "sect_gate",
+              "wild",
+              "secret_realm",
+              "building",
+              "herb_garden",
+              "quiet_room"
+            ]
+          },
+          "uniqueItems": true
         }
       },
       "required": [

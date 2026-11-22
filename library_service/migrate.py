@@ -73,6 +73,8 @@ def migrate(legacy: Path, reviewed_data: Path, mapping: Path, output: Path, sche
         fail(mapping.name, "/entries", "必须逐条覆盖旧资料，不能静默丢弃或添加映射")
     manifest = read_json(reviewed_data, "manifest.json", {})
     snapshot = load_catalog(reviewed_data, schema_root, manifest.get("published_phase", 1))
+    place_schema = read_json(schema_root, "place.json", {})
+    place_kinds = place_schema["properties"]["rules"]["properties"]["kind"]["enum"]
     for reference, action in plan["entries"].items():
         if (
             not isinstance(action, dict)
@@ -90,8 +92,15 @@ def migrate(legacy: Path, reviewed_data: Path, mapping: Path, output: Path, sche
                     f"/entries/{reference}/target",
                     "迁移目标类别不符；无对应类别的旧条目须明确退出或另行设计",
                 )
+        elif action.get("action") == "place_kind":
+            if (
+                not reference.startswith("place_types:")
+                or set(action) != {"action", "kind", "reason"}
+                or action["kind"] not in place_kinds
+            ):
+                fail(mapping.name, f"/entries/{reference}", "旧地点类型须映射到有效的地点 kind")
         elif not (action.get("action") == "retire" and set(action) == {"action", "reason"}):
-            fail(mapping.name, f"/entries/{reference}", "必须显式选择 replace 或 retire")
+            fail(mapping.name, f"/entries/{reference}", "必须明确选择替代条目、映射地点类型或退出")
     if output.exists() or output.is_symlink():
         fail(str(output), "/", "输出目录已存在，禁止覆盖")
     if output.resolve().is_relative_to(reviewed_data.resolve()):
