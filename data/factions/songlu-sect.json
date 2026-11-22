@@ -1,0 +1,85 @@
+{
+  "type": "faction",
+  "key": "songlu-sect",
+  "name": "松炉谷（暂定）",
+  "phase": 1,
+  "public": {
+    "description": "靠药圃和丹房立足的小宗门。刚入门的人多从分拣草药、记火候做起。账做清楚能换到教习时间，农忙时也要按班去圃里。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "sect",
+    "seat": "place:songlu-gate",
+    "strongest_realm": "realm:zhuji",
+    "recruit": [
+      {
+        "roots": [
+          "root:heavenly",
+          "root:dual"
+        ],
+        "rank": "inner"
+      },
+      {
+        "roots": [
+          "root:mutant",
+          "root:triple"
+        ],
+        "rank": "outer"
+      },
+      {
+        "roots": [
+          "root:quad",
+          "root:penta"
+        ],
+        "rank": "servant"
+      }
+    ],
+    "ranks": {
+      "inner": {
+        "monthly": [
+          {
+            "item": "item:spirit-stone",
+            "quantity": 4
+          }
+        ],
+        "duties": "跟教习管一炉入门药，按日记火。"
+      },
+      "outer": {
+        "monthly": [
+          {
+            "item": "item:spirit-stone",
+            "quantity": 2
+          }
+        ],
+        "duties": "分拣入库药材，轮值清理药架。"
+      },
+      "servant": {
+        "monthly": [
+          {
+            "item": "item:spirit-stone",
+            "quantity": 1
+          }
+        ],
+        "duties": "照料指定药垄，按账交叶，不私自进丹房。"
+      }
+    },
+    "arts": [
+      "art:basic-breathing",
+      "art:songlu-breathing",
+      "art:firebolt"
+    ],
+    "specialties": [
+      "item:medicinal-spirit-herb",
+      "item:juqi-dan",
+      "item:zhuji-dan"
+    ],
+    "characters": [
+      "character:jiang-lusheng",
+      "character:tang-caiheng"
+    ]
+  },
+  "narration": {
+    "style": "门人常把药名说在价钱前头，问清批次才开方。走进丹房先洗手。"
+  },
+  "secret": {}
+}

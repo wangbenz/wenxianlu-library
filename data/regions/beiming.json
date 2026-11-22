@@ -1,0 +1,19 @@
+{
+  "type": "region",
+  "key": "beiming",
+  "name": "北冥",
+  "phase": 1,
+  "public": {
+    "description": "北来的皮货带着咸霜。贩子说冰河底下有温流，哪条冬路能走，每年得问当地船家。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm_range": [
+      "realm:fanren",
+      "realm:zhuji"
+    ],
+    "danger": "high"
+  },
+  "narration": {},
+  "secret": {}
+}

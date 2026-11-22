@@ -1,0 +1,28 @@
+{
+  "type": "place",
+  "key": "white-cliff-gate",
+  "name": "白崖门山门（暂定）",
+  "phase": 1,
+  "public": {
+    "description": "白石崖下设外门问事处，访客在石阶脚下登记。谷口小道和坡上的石桩由门中巡守。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "sect_gate",
+    "parent": "place:lu-shui",
+    "danger": "safe",
+    "max_rarity": "rare",
+    "realm_range": [
+      "realm:fanren",
+      "realm:zhuji"
+    ],
+    "products": [],
+    "factions": [
+      "faction:white-cliff-sect"
+    ]
+  },
+  "narration": {
+    "atmosphere": "山风把石阶扫得很净，石桩上只留半寸朱砂刻线。"
+  },
+  "secret": {}
+}

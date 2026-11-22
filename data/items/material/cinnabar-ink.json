@@ -1,0 +1,45 @@
+{
+  "type": "item",
+  "key": "cinnabar-ink",
+  "name": "制符丹砂",
+  "phase": 1,
+  "public": {
+    "description": "配符墨用的朱砂细粉。",
+    "usage": "按所学方法磨开，再用合适的笔蘸取。",
+    "limitations": "粗粒会挑坏符纸，已经混入杂质的粉不能直接用。",
+    "source": "通用修仙设定",
+    "aliases": [
+      "丹砂"
+    ]
+  },
+  "rules": {
+    "category": "material",
+    "grade": "tier_1",
+    "rarity": "common",
+    "realm": "realm:fanren",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 1,
+      "max": 3,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "craft"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:tide-ink-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "material",
+      "note": "低阶符墨的原料，须磨匀后使用。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "暗红粉末，压在纸上能留下一道亮痕。"
+  },
+  "secret": {}
+}

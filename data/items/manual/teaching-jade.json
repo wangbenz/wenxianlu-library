@@ -1,0 +1,42 @@
+{
+  "type": "item",
+  "key": "teaching-jade",
+  "name": "传法玉简",
+  "phase": 1,
+  "public": {
+    "description": "刻过导气纹的薄玉条，常用来保存口授细节。",
+    "usage": "依照教习传授的方法读取玉简里的内容，读完仍需练习。",
+    "limitations": "缺页、损伤或来历不明的玉简应先请人辨认。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "manual",
+    "grade": "huang_low",
+    "rarity": "uncommon",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 5,
+      "max": 9,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:tide-ink-gate"
+    ],
+    "stackable": false,
+    "effect": {
+      "type": "utility",
+      "note": "保存一段入门功法的节拍和发音，可由修士调取研习。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "玉简两头薄，中间刻着能摸到的浅凹槽。"
+  },
+  "secret": {}
+}

@@ -1,0 +1,26 @@
+{
+  "type": "place",
+  "key": "shallow-vault",
+  "name": "回水石窟",
+  "phase": 1,
+  "public": {
+    "description": "青溪船家提过一处退水才露口的石窟，位置仍有几种说法。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "secret_realm",
+    "parent": "place:wan-yao-foothills",
+    "danger": "high",
+    "max_rarity": "uncommon",
+    "realm_range": [
+      "realm:lianqi",
+      "realm:zhuji"
+    ],
+    "products": [],
+    "factions": []
+  },
+  "narration": {
+    "atmosphere": "退水留下的泥痕从高到低一层层泛白。"
+  },
+  "secret": {}
+}

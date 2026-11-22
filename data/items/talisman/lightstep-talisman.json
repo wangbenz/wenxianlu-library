@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "lightstep-talisman",
+  "name": "轻身符",
+  "phase": 1,
+  "public": {
+    "description": "走坡、过泥地时用的轻身符。",
+    "usage": "贴身激发后沿看得清的路走。",
+    "limitations": "只辅助步行，湿滑地面仍要找落脚处。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "talisman",
+    "grade": "tier_1",
+    "rarity": "common",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 2,
+      "max": 4,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "craft",
+      "sect"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:tide-ink-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "movement",
+      "note": "短时减轻抬脚与落足的负担。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "符面线条朝纸边散开，纸很轻，容易被风卷走。"
+  },
+  "secret": {}
+}

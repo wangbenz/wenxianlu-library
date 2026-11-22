@@ -1,0 +1,27 @@
+{
+  "type": "character",
+  "key": "shen-zhaochuan",
+  "name": "沈照川",
+  "phase": 1,
+  "public": {
+    "description": "常带访客走外门石阶，遇到山雾便在旧路桩上系布。",
+    "identity": "白崖门引路弟子",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:lianqi",
+    "stage": "l6",
+    "location": "place:white-cliff-gate",
+    "holdings": [
+      "item:huichun-dan",
+      "item:basic-protection-talisman"
+    ],
+    "role": "guide",
+    "faction": "faction:white-cliff-sect"
+  },
+  "narration": {
+    "personality": "走得快，等人的时候会回身数队伍。",
+    "speech": "报路线时会说哪一步能回头。"
+  },
+  "secret": {}
+}

@@ -1,0 +1,42 @@
+{
+  "type": "item",
+  "key": "mid-spirit-stone",
+  "name": "中品灵石",
+  "phase": 1,
+  "public": {
+    "description": "灵气凝得较紧，常用于较大宗的买卖。",
+    "usage": "交由懂验石的人辨明品相，再谈折价。",
+    "limitations": "价目只是大致行情，残损和灵气流失都会影响折价。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "spirit_stone",
+    "grade": "mid",
+    "rarity": "rare",
+    "realm": "realm:zhuji",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 90,
+      "max": 115,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:white-cliff-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "currency",
+      "note": "灵气更集中，实际估价由交易双方验定。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "透过边角能看见匀净的浅青色。"
+  },
+  "secret": {}
+}

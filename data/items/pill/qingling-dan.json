@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "qingling-dan",
+  "name": "清灵丹",
+  "phase": 1,
+  "public": {
+    "description": "药性偏缓，用来收束行功后散乱的灵力。",
+    "usage": "停下施术，静坐后再服用。",
+    "limitations": "只能辅助调息，重伤和经脉裂损要另治。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "pill",
+    "grade": "tier_2",
+    "rarity": "uncommon",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 5,
+      "max": 9,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect",
+      "craft"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:songlu-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "restore_spirit",
+      "note": "帮助平复短时施术后的灵力紊乱。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "白丸上有浅青细纹，闻起来有薄荷的凉意。"
+  },
+  "secret": {}
+}

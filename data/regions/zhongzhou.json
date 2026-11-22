@@ -4,13 +4,13 @@
   "name": "中洲",
   "phase": 1,
   "public": {
-    "source": "问仙录原创设定",
-    "description": "凡俗聚落与修士往来较多的大域。样例只描述最初入道所需的范围。"
+    "description": "南缘水网密布，郡城收粮，山门守灵脉。青溪镇处在商道和支流交会处，平常卖的是药、布和船桨。",
+    "source": "问仙录原创设定"
   },
   "rules": {
     "realm_range": [
       "realm:fanren",
-      "realm:lianqi"
+      "realm:zhuji"
     ],
     "danger": "low"
   },

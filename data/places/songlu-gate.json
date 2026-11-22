@@ -1,0 +1,32 @@
+{
+  "type": "place",
+  "key": "songlu-gate",
+  "name": "松炉谷山门（暂定）",
+  "phase": 1,
+  "public": {
+    "description": "谷口能闻到晒药的气味。外来人沿竹架下的石路行走，药圃和丹房要有人引领才可入内。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "sect_gate",
+    "parent": "place:lu-shui",
+    "danger": "safe",
+    "max_rarity": "rare",
+    "realm_range": [
+      "realm:fanren",
+      "realm:zhuji"
+    ],
+    "products": [
+      "item:chiyang-flower",
+      "item:juqi-dan",
+      "item:zhuji-dan"
+    ],
+    "factions": [
+      "faction:songlu-sect"
+    ]
+  },
+  "narration": {
+    "atmosphere": "松针落在丹房瓦片上，管火的人每次开门都先听炉声。"
+  },
+  "secret": {}
+}

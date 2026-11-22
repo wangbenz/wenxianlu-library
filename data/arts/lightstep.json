@@ -1,0 +1,33 @@
+{
+  "type": "art",
+  "key": "lightstep",
+  "name": "轻身术",
+  "phase": 1,
+  "public": {
+    "description": "把灵力引到腿足的一种简短术法。",
+    "usage": "通过窄坡和泥地时，可先看准落脚点再施展。",
+    "limitations": "施法者仍须找到落脚处，不能靠术法一直悬空。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "kind": "spell",
+    "grade": "huang_low",
+    "realm": "realm:lianqi",
+    "affinity": [
+      "wind",
+      "wood"
+    ],
+    "effect": {
+      "type": "movement",
+      "note": "短时辅助步行、跃步与稳住落脚。"
+    },
+    "obtain": [
+      "sect",
+      "market"
+    ]
+  },
+  "narration": {
+    "casting": "提脚前鞋底的泥会微微一松。"
+  },
+  "secret": {}
+}

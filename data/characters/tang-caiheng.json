@@ -1,0 +1,27 @@
+{
+  "type": "character",
+  "key": "tang-caiheng",
+  "name": "唐采蘅",
+  "phase": 1,
+  "public": {
+    "description": "跟着谷中管火人做杂活，常替谷里联络青溪的药商，熟悉雨后进山的路。",
+    "identity": "松炉谷引路弟子",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:lianqi",
+    "stage": "l5",
+    "location": "place:songlu-gate",
+    "holdings": [
+      "item:fasting-pill",
+      "item:medicinal-spirit-herb"
+    ],
+    "role": "guide",
+    "faction": "faction:songlu-sect"
+  },
+  "narration": {
+    "personality": "遇到急事容易先替别人多揽一份差，闲下来才想起核对收条。",
+    "speech": "常把复杂的事说成眼下能做的一步。"
+  },
+  "secret": {}
+}

@@ -1,0 +1,33 @@
+{
+  "type": "art",
+  "key": "songlu-breathing",
+  "name": "温炉行息诀",
+  "phase": 1,
+  "public": {
+    "description": "松炉谷管火弟子入门时所学的行气法。",
+    "usage": "在安稳处练习起息、守息与收息，熟练后用于长期积累。",
+    "limitations": "起落求稳，急于提气容易使口鼻干涩，需停下调息。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "practice",
+    "grade": "huang_mid",
+    "realm": "realm:lianqi",
+    "affinity": [
+      "wood",
+      "fire"
+    ],
+    "effect": {
+      "type": "cultivation_boost",
+      "note": "在缓慢起息和回收之间练习保持气息稳定。"
+    },
+    "obtain": [
+      "sect"
+    ],
+    "max_realm": "realm:zhuji"
+  },
+  "narration": {
+    "casting": "练者半闭眼听短长气息，有时用一盏温水提醒自己收功。"
+  },
+  "secret": {}
+}

@@ -1,0 +1,30 @@
+{
+  "type": "place",
+  "key": "hesheng-apothecary",
+  "name": "禾生药铺",
+  "phase": 1,
+  "public": {
+    "description": "青石街上的药铺。门口收凡药，后院有给低阶修士处理的灵草与药丸，账分别记在两本簿子上。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "building",
+    "parent": "place:qingxi-town",
+    "danger": "safe",
+    "max_rarity": "uncommon",
+    "realm_range": [
+      "realm:fanren",
+      "realm:lianqi"
+    ],
+    "products": [
+      "item:medicinal-spirit-herb",
+      "item:huichun-dan",
+      "item:fasting-pill"
+    ],
+    "factions": []
+  },
+  "narration": {
+    "atmosphere": "白布帘后的筛子响得短而密，空气里有新切草根的苦味。"
+  },
+  "secret": {}
+}

@@ -1,0 +1,45 @@
+{
+  "type": "item",
+  "key": "medicinal-spirit-herb",
+  "name": "青灵草",
+  "phase": 1,
+  "public": {
+    "description": "水边药圃常种，叶背有两道浅脉。",
+    "usage": "从近根处剪下合用叶片，裹干布送药铺。",
+    "limitations": "连根拔起会伤苗。浸水发黑的叶片要另挑出来。",
+    "source": "通用修仙设定",
+    "aliases": [
+      "药用灵草"
+    ]
+  },
+  "rules": {
+    "category": "herb",
+    "grade": "tier_1",
+    "rarity": "common",
+    "realm": "realm:fanren",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 1,
+      "max": 3,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "gather",
+      "market"
+    ],
+    "found_in": [
+      "place:reed-bank-herb-garden",
+      "place:hesheng-apothecary"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "material",
+      "note": "叶片可作低阶伤药原料。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "叶尖青而薄，折断处的汁液有一点腥气。"
+  },
+  "secret": {}
+}

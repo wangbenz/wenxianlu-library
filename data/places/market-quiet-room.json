@@ -1,0 +1,29 @@
+{
+  "type": "place",
+  "key": "market-quiet-room",
+  "name": "灰篷静室",
+  "phase": 1,
+  "public": {
+    "description": "坊市后院按时辰借用的静室，门外有守门人。屋内有坐席和清水，可供歇息或练一段吐纳。",
+    "source": "问仙录原创设定",
+    "aliases": [
+      "静室"
+    ]
+  },
+  "rules": {
+    "kind": "building",
+    "parent": "place:grey-awning-market",
+    "danger": "safe",
+    "max_rarity": "common",
+    "realm_range": [
+      "realm:fanren",
+      "realm:lianqi"
+    ],
+    "products": [],
+    "factions": []
+  },
+  "narration": {
+    "atmosphere": "门外有一排沙漏，时满之前由人轻敲门框。"
+  },
+  "secret": {}
+}

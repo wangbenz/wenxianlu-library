@@ -1,0 +1,27 @@
+{
+  "type": "character",
+  "key": "wen-jingting",
+  "name": "温敬亭",
+  "phase": 1,
+  "public": {
+    "description": "受摊主请托验石与核对交易票。接货时先找封绳与印章，常叫出货的人等在桌旁。",
+    "identity": "灰篷坊市验货人",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:lianqi",
+    "stage": "l4",
+    "location": "place:grey-awning-market",
+    "holdings": [
+      "item:spirit-stone",
+      "item:blank-talisman-paper"
+    ],
+    "role": "merchant",
+    "faction": "faction:grey-awning-traders"
+  },
+  "narration": {
+    "personality": "把证据和估价分开说，对无法查明的货只给疑点。",
+    "speech": "习惯问「谁经手过」，少评价人品。"
+  },
+  "secret": {}
+}

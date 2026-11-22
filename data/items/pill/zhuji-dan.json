@@ -1,0 +1,41 @@
+{
+  "type": "item",
+  "key": "zhuji-dan",
+  "name": "筑基丹",
+  "phase": 1,
+  "public": {
+    "description": "松炉谷药房按批次封存的筑基辅药。",
+    "usage": "炼气圆满并备妥相应法门后，方能在筑基时使用。",
+    "limitations": "须本人具备筑基条件，丹药仅辅助这次尝试。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "pill",
+    "grade": "tier_2",
+    "rarity": "rare",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 60,
+      "max": 90,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "sect",
+      "craft"
+    ],
+    "found_in": [
+      "place:songlu-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "breakthrough_aid",
+      "note": "在冲击筑基时辅助稳住行气。"
+    },
+    "side_effects": "气息未稳时强行服用，可能加重经脉负担。"
+  },
+  "narration": {
+    "appearance": "米白丹丸，干燥时有轻微松脂气。"
+  },
+  "secret": {}
+}

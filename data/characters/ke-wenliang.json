@@ -1,0 +1,27 @@
+{
+  "type": "character",
+  "key": "ke-wenliang",
+  "name": "柯问梁",
+  "phase": 1,
+  "public": {
+    "description": "执事服的袖口用石灰水洗得发白，随身带名簿，负责记录投帖与外门考核。",
+    "identity": "白崖门收徒执事",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:zhuji",
+    "stage": "early",
+    "location": "place:white-cliff-gate",
+    "holdings": [
+      "item:protective-talisman",
+      "item:storage-pouch"
+    ],
+    "role": "recruiter",
+    "faction": "faction:white-cliff-sect"
+  },
+  "narration": {
+    "personality": "做事按先后，愿给肯把过失说清楚的人再一次机会。",
+    "speech": "常先报考核条件，再听来人有什么难处。"
+  },
+  "secret": {}
+}

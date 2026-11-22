@@ -1,0 +1,44 @@
+{
+  "type": "item",
+  "key": "protective-talisman",
+  "name": "护身符",
+  "phase": 1,
+  "public": {
+    "description": "入山巡路前常备的护身符纸。",
+    "usage": "预知有冲击时运灵力激发。",
+    "limitations": "护持时间有限，挡过重击后须重新查看符面。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "talisman",
+    "grade": "tier_1",
+    "rarity": "uncommon",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 4,
+      "max": 7,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect",
+      "craft"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:white-cliff-gate",
+      "place:tide-ink-gate"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "protect",
+      "note": "激发后短时减轻迎面的普通冲击。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "朱线从纸角回环，收笔处盖着小圆印。"
+  },
+  "secret": {}
+}

@@ -1,0 +1,31 @@
+{
+  "type": "place",
+  "key": "reed-bank-herb-garden",
+  "name": "芦湾药圃",
+  "phase": 1,
+  "public": {
+    "description": "青溪镇外沿水开的药圃。水浅时可沿圃埂进去，涨水要先放开分水闸。禾生药铺常来收叶。",
+    "source": "问仙录原创设定",
+    "aliases": [
+      "药圃"
+    ]
+  },
+  "rules": {
+    "kind": "building",
+    "parent": "place:lu-shui",
+    "danger": "low",
+    "max_rarity": "common",
+    "realm_range": [
+      "realm:fanren",
+      "realm:lianqi"
+    ],
+    "products": [
+      "item:medicinal-spirit-herb"
+    ],
+    "factions": []
+  },
+  "narration": {
+    "atmosphere": "埂上的绳结每晚巡圃时会重系一遍，脚下软泥能留住鞋印。"
+  },
+  "secret": {}
+}

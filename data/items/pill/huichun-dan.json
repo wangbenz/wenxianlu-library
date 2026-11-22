@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "huichun-dan",
+  "name": "回春丹",
+  "phase": 1,
+  "public": {
+    "description": "常备的小伤丹。",
+    "usage": "外伤妥善处理后，可配合休息服用。",
+    "limitations": "重伤、中毒或气脉损伤需另行诊治。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "pill",
+    "grade": "tier_1",
+    "rarity": "common",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 2,
+      "max": 4,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "craft",
+      "reward"
+    ],
+    "found_in": [
+      "place:hesheng-apothecary",
+      "place:grey-awning-market"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "heal",
+      "note": "协助恢复轻伤，仍需清创、包扎和歇息。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "药衣淡绿，遇水容易软。"
+  },
+  "secret": {}
+}

@@ -1,0 +1,27 @@
+{
+  "type": "character",
+  "key": "jiang-lusheng",
+  "name": "蒋芦生",
+  "phase": 1,
+  "public": {
+    "description": "在谷中收药多年，平日也查验入门名帖、安排药圃学徒的差事。衣袋里常装一把辨草用的小剪。",
+    "identity": "松炉谷收徒执事",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:zhuji",
+    "stage": "early",
+    "location": "place:songlu-gate",
+    "holdings": [
+      "item:juqi-dan",
+      "item:qingling-dan"
+    ],
+    "role": "recruiter",
+    "faction": "faction:songlu-sect"
+  },
+  "narration": {
+    "personality": "看重能按时收工、老实记数的人，见着药材好坏都爱掰开给人看。",
+    "speech": "先问愿意守几班，再讲能学什么。"
+  },
+  "secret": {}
+}

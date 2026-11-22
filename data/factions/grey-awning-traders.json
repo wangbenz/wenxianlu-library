@@ -1,0 +1,30 @@
+{
+  "type": "faction",
+  "key": "grey-awning-traders",
+  "name": "灰篷坊市行会",
+  "phase": 1,
+  "public": {
+    "description": "为北岸摊位记账、见证交易的行会。验货人可以提出疑点，买卖双方仍要商定是否成交。租静室和寄存物品都在柜上登记。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "guild",
+    "seat": "place:grey-awning-market",
+    "strongest_realm": "realm:lianqi",
+    "recruit": [],
+    "ranks": {},
+    "arts": [],
+    "specialties": [
+      "item:spirit-stone",
+      "item:mid-spirit-stone",
+      "item:first-tier-beast-core"
+    ],
+    "characters": [
+      "character:wen-jingting"
+    ]
+  },
+  "narration": {
+    "style": "柜上留两份票根，领货时当面把日期和经手人对清。"
+  },
+  "secret": {}
+}

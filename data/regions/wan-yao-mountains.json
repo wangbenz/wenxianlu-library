@@ -1,0 +1,19 @@
+{
+  "type": "region",
+  "key": "wan-yao-mountains",
+  "name": "万妖山脉",
+  "phase": 1,
+  "public": {
+    "description": "南侧山脚有采药人留下的绳结和路桩。老向导说，越过第二道石脊后，听见熟人的声音也要先看脚印。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm_range": [
+      "realm:fanren",
+      "realm:zhuji"
+    ],
+    "danger": "high"
+  },
+  "narration": {},
+  "secret": {}
+}

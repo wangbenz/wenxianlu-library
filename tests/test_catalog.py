@@ -201,6 +201,12 @@ def test_schema_cannot_fetch_external_resources(data, tmp_path):
         load_catalog(data, schemas)
 
 
+def test_faction_rejects_scene_visit_weight(complete):
+    edit(complete, "factions/sample-sect.json", lambda r: r["rules"].update(visit_weight=5))
+    with pytest.raises(CatalogError, match=r"factions/sample-sect\.json:/rules: .*additionalProperties"):
+        load(complete)
+
+
 def test_event_and_recruit_consistency(complete):
     edit(complete, "events/sample-event.json", lambda r: r["rules"]["trigger"].update(phase=2))
     with pytest.raises(CatalogError, match="触发阶段"):

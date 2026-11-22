@@ -21,6 +21,10 @@ def main():
         scratch = Path(directory)
         data = scratch / "data"
         shutil.copytree(ROOT / "data", data)
+        place = data / "places/qingxi-town.json"
+        sample = json.loads(place.read_text())
+        sample["secret"]["notes"] = "用于验证权限的临时测试备注"
+        place.write_text(json.dumps(sample, ensure_ascii=False))
         with socket.socket() as probe:
             probe.bind(("127.0.0.1", 0))
             port = probe.getsockname()[1]
@@ -92,7 +96,6 @@ def main():
             assert request("/api/library/v1/ops/reload", "POST", reload_token)[0] == 409
             assert request("/api/library/v1/public/place/qingxi-town")[1] == before
             file.write_bytes(original)
-            place = data / "places/qingxi-town.json"
             changed = json.loads(place.read_text())
             changed["public"]["description"] = "HTTP 检查的新快照"
             place.write_text(json.dumps(changed, ensure_ascii=False))

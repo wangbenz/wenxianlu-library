@@ -1,0 +1,32 @@
+{
+  "type": "place",
+  "key": "grey-awning-market",
+  "name": "灰篷坊市",
+  "phase": 1,
+  "public": {
+    "description": "青溪北岸的修士集市。摊主挂灰篷标出经手人，灵石交易可当面验货，也有人专收山脚出产。",
+    "source": "问仙录原创设定",
+    "aliases": [
+      "坊市",
+      "北岸坊市"
+    ]
+  },
+  "rules": {
+    "kind": "market",
+    "parent": "place:lu-shui",
+    "danger": "low",
+    "max_rarity": "rare",
+    "realm_range": [
+      "realm:fanren",
+      "realm:lianqi"
+    ],
+    "products": [],
+    "factions": [
+      "faction:grey-awning-traders"
+    ]
+  },
+  "narration": {
+    "atmosphere": "买卖双方各把货摆到桌沿，验完才挪到桌心。"
+  },
+  "secret": {}
+}

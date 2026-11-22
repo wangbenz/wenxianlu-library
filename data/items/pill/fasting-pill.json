@@ -1,0 +1,46 @@
+{
+  "type": "item",
+  "key": "fasting-pill",
+  "name": "辟谷丹",
+  "phase": 1,
+  "public": {
+    "description": "采药人和巡山弟子常备的干粮替代品。",
+    "usage": "赶路或闭门静坐时，可临时应付饥饿。",
+    "limitations": "仍需饮水，连续以丹代食会伤脾胃。",
+    "source": "通用修仙设定",
+    "aliases": [
+      "辟谷丸"
+    ]
+  },
+  "rules": {
+    "category": "pill",
+    "grade": "tier_1",
+    "rarity": "common",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 1,
+      "max": 2,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "craft",
+      "sect"
+    ],
+    "found_in": [
+      "place:hesheng-apothecary",
+      "place:grey-awning-market"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "sustenance",
+      "note": "短时缓和饥饿。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "灰黄色，嚼碎有烘谷壳的香气。"
+  },
+  "secret": {}
+}

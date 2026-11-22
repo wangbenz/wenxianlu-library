@@ -1,0 +1,39 @@
+{
+  "type": "realm",
+  "key": "huashen",
+  "name": "化神",
+  "phase": 3,
+  "public": {
+    "description": "神魂与修行所得逐步相合，能够感知更广阔的天地变化。",
+    "usage": "用于后续阶段的境界顺序与内容引用。",
+    "limitations": "具体能力和晋阶条件随对应阶段资料审定。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "order": 5,
+    "detail": "placeholder",
+    "stages": [
+      {
+        "key": "early",
+        "name": "初期"
+      },
+      {
+        "key": "middle",
+        "name": "中期"
+      },
+      {
+        "key": "late",
+        "name": "后期"
+      },
+      {
+        "key": "perfect",
+        "name": "大圆满"
+      }
+    ],
+    "lifespan_years": 2200,
+    "can": [],
+    "cannot": []
+  },
+  "narration": {},
+  "secret": {}
+}

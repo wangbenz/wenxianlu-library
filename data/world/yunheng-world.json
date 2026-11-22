@@ -4,15 +4,19 @@
   "name": "云衡界（暂定）",
   "phase": 1,
   "public": {
-    "source": "问仙录原创设定",
-    "description": "山川间灵气流转，凡俗城镇与修行宗门往来。此为格式评审样例，尚未开放完整世界内容。"
+    "description": "中洲南缘，青溪穿过芦水郡入江。沿岸人家照水势种田、摆渡，修士顺着灵脉设坊开宗。两边共用一条河，也会为一段河岸、一季药草争执。往北和往海上的见闻，多靠行商与船客口耳相传。",
+    "source": "问仙录原创设定"
   },
   "rules": {
     "layers": [
       "lower"
     ],
     "regions": [
-      "region:zhongzhou"
+      "region:zhongzhou",
+      "region:wan-yao-mountains",
+      "region:east-sea-islands",
+      "region:demon-territory",
+      "region:beiming"
     ]
   },
   "narration": {},

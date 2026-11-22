@@ -1,0 +1,26 @@
+{
+  "type": "character",
+  "key": "lu-qiuhe",
+  "name": "陆秋禾",
+  "phase": 1,
+  "public": {
+    "description": "青溪本地人，管收药、分药和赊账。常在柜外验草叶，遇上辨不准的灵物就记下来请人看。",
+    "identity": "禾生药铺东家",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm": "realm:fanren",
+    "stage": "mortal",
+    "location": "place:hesheng-apothecary",
+    "holdings": [
+      "item:medicinal-spirit-herb",
+      "item:huichun-dan"
+    ],
+    "role": "herbalist"
+  },
+  "narration": {
+    "personality": "肯教人辨草，碰到湿药和乱账会马上停手。",
+    "speech": "先问草叶从哪片水边采的。"
+  },
+  "secret": {}
+}

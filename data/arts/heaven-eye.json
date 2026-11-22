@@ -1,0 +1,30 @@
+{
+  "type": "art",
+  "key": "heaven-eye",
+  "name": "天眼术",
+  "phase": 1,
+  "public": {
+    "description": "把灵力聚在目上的简单辨气法。",
+    "usage": "看清一件物品或一段地面的气息变化。",
+    "limitations": "气息可以被转移或伪装。看见余息后还须核对实物与来源。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "kind": "spell",
+    "grade": "huang_low",
+    "realm": "realm:lianqi",
+    "affinity": [],
+    "effect": {
+      "type": "utility",
+      "note": "短时辨认近处残留或流动的浅层灵气。"
+    },
+    "obtain": [
+      "sect",
+      "market"
+    ]
+  },
+  "narration": {
+    "casting": "施法者须定眼片刻，收术后常闭目歇一会儿。"
+  },
+  "secret": {}
+}

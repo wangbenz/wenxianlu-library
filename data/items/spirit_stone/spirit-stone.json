@@ -4,12 +4,13 @@
   "name": "下品灵石",
   "phase": 1,
   "public": {
+    "description": "能存住少量灵气的石块，坊市多用它记账。",
+    "usage": "当面验明后，可用于交易或按所学法门取用其中灵气。",
+    "limitations": "灵气散尽后只剩石坯，按实物状况估价。",
     "source": "通用修仙设定",
-    "description": "含有少量灵气的晶石。",
-    "usage": "修士交易时使用的计价物。",
-    "limitations": "消耗后的数量由游戏存档记录，资料库不负责结算。",
     "aliases": [
-      "灵石"
+      "灵石",
+      "下品"
     ]
   },
   "rules": {
@@ -25,20 +26,24 @@
     },
     "obtain": [
       "market",
+      "sect",
       "reward"
     ],
     "found_in": [
-      "place:qingxi-town"
+      "place:grey-awning-market",
+      "place:white-cliff-gate",
+      "place:songlu-gate",
+      "place:tide-ink-gate"
     ],
     "stackable": true,
     "effect": {
       "type": "currency",
-      "note": "样例计价单位，不执行兑换或玩家余额变化。"
+      "note": "修行交易常用计价单位。"
     },
     "side_effects": ""
   },
   "narration": {
-    "appearance": "灰白晶石中有细淡的流光。"
+    "appearance": "青白色，断面像一层薄薄的雾。"
   },
   "secret": {}
 }

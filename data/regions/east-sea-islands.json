@@ -1,0 +1,19 @@
+{
+  "type": "region",
+  "key": "east-sea-islands",
+  "name": "东海群岛",
+  "phase": 1,
+  "public": {
+    "description": "沿海船客说，岛与岛之间各有水路，岛民按潮历约船。青溪偶尔能见到用贝壳夹封的海货。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "realm_range": [
+      "realm:fanren",
+      "realm:zhuji"
+    ],
+    "danger": "high"
+  },
+  "narration": {},
+  "secret": {}
+}

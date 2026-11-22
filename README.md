@@ -1,8 +1,8 @@
 # 问仙录 JSON 文件资料库
 
-资料以 Git 中的 JSON 文件为准。FastAPI 启动时校验完整文件集，在内存中建立只读索引；本工程没有 Django 模型、维护后台、资料数据库或写入资料的 HTTP 接口。游戏中的人物状态、物品归属、D20、突破及 AI 输出裁决由游戏工程负责。
+资料以 Git 中的 JSON 文件为准。FastAPI 启动时校验完整文件集，并在内存中建立只读索引。资料库保存可由多份命卷引用的设定与规则定义。角色开局、剧情场景、事件抽取和判定由游戏工程负责，实际发生的事和人物物品状态保存在命卷中。
 
-本分支是任务要求的**第一阶段 PR：格式和服务**。包含十类 Schema、加载器、交叉校验、公开/内部接口、受保护重载、显式旧文件迁移工具与闭合样例。格式经 Feno、Claude 审核后，第二个 PR 才起草第一批完整内容，不把示例当作正式平衡规则。
+本分支是在 JSON 格式与服务之上制作的**第一批内容草案**，当前启用凡人至筑基的资料。世界名、宗门名、价格、寿元和门派供给供审阅。青溪镇是首批收录的地区之一。详见[首批资料审阅稿](content-review/phase-one.md)。
 
 ## 安装与校验
 
@@ -50,16 +50,18 @@ uv run uvicorn library_service.api:create_app --factory --host 127.0.0.1 --port 
 | art | arts/ | schema/art.json |
 | faction | factions/ | schema/faction.json |
 | character | characters/ | schema/character.json |
-| event | events/ | schema/event.json |
+| event（预留） | events/ | schema/event.json |
 
 每条资料的外层固定为 `type/key/name/phase/public/rules/narration/secret`。文件名与 key 相同；引用一律为 `类型:key`，由 Schema 检查类别、加载器检查存在性和阶段。name 使用中文，key 使用小写英文数字和连字符。新 key 是新身份；改名只改 name，不把文件改名作为同条资料的无声重命名。
 
 - `public`：玩家展示字段。来源可在此标记为“通用修仙设定”或“问仙录原创设定”。
 - `rules`：机器使用的枚举、数量与引用。`can/cannot` 为 Schema 中列出的能力标签；突破 requires 为条件标签、risk 为结果/严重度/可恢复标志。这里只校验定义，不执行对应游戏规则。
-- `narration`：AI 写作提示。
+- `narration`：可复用的描写参考，例如器物外观、人物说话方式和地点风貌。
 - `secret`：按类别限定的隐藏信息。
 
 任务中明确要求保留的 `effect.note`、`side_effects`、`duties` 是解释性注释，不通过关键词解析成判定规则。
+
+势力条目记录门派常规收徒条件与供给。某一场收徒活动的时间、参与门派和抽取权重由游戏场景配置决定。人物条目中的所属、地点和物品是供游戏采用的初始设定，人物实际所在和物品归属以命卷为准。首批清单的 `event` 类为空，格式保留给现有服务测试。
 
 枚举使用英文。品阶映射：灵石 `low/mid/high/supreme` 对应下/中/上/极品；丹药、灵草、材料、符箓的 `tier_1` 至 `tier_9` 对应一至九品；法器为 `low_artifact/mid_artifact/high_artifact/supreme_artifact/magic_treasure/spirit_treasure`；功法为 `huang/xuan/di/tian` 与 `low/mid/high` 的组合，如 `huang_low`。价格单位 `low_spirit_stone` 对应下品灵石，`silver_liang` 对应两；必须与 currency 配对。
 
@@ -92,7 +94,7 @@ uv run uvicorn library_service.api:create_app --factory --host 127.0.0.1 --port 
 
 列表支持 kind、phase、重复 keys 参数、offset 和 limit（最大 100）；phase 不得请求未启用阶段。列表成功响应含 count/offset/limit/results 与版本标识。所有业务成功响应均含 revision、content_hash。
 
-公开单条严格只返回 `type/key/name/phase/public/revision/content_hash`；不返回 rules、narration、secret。H5 应通过游戏后端查询已见条目，资料库本身不知道角色见过什么。公开 Git 仓库中的 JSON 源文件仍可被阅读：本 PR 的 secret 仅为虚构隔离样例，真实保密剧情应使用受限内容仓库/发布包，不能仅靠 API 投影隐藏公开源码。
+公开单条只返回 `type/key/name/phase/public/revision/content_hash`。H5 应通过游戏后端查询已见条目，玩家已知信息以命卷为准。公开审阅版中的 `secret` 均为空对象。权限测试使用虚构的隐藏内容。
 
 ## 版本、历史与旧接口兼容
 
@@ -112,12 +114,12 @@ uv run python -m library_service.migrate --legacy tests/fixtures/legacy/starter-
 uv run python -m library_service.migrate --legacy tests/fixtures/legacy/starter-v0.1.json --reviewed-data /path/to/reviewed-data --mapping /tmp/starter-plan.json --output /path/to/new-data
 ```
 
-迁移要求来源指纹匹配、全部旧编号有明确处置、替代引用有效、新数据全量校验通过。仅复制 manifest 和登记文件到全新目录；不复制隐藏环境文件，不覆盖已有输出，不修改输入，不访问数据库。输出目录尚不自动激活；若文件复制期间发生错误，应检查并弃用该新输出，不能将它当作已迁移成功。完整旧资料的逐条改写与映射随内容 PR 审核，不把本 PR 的少量样例当作全量内容迁移完成。
+迁移要求来源指纹匹配、全部旧编号有明确处置、替代引用有效、新数据全量校验通过。仅复制 manifest 和登记文件到全新目录；不复制隐藏环境文件，不覆盖已有输出，不修改输入，不访问数据库。输出目录尚不自动激活；若文件复制期间发生错误，应检查并弃用该新输出，不能将它当作已迁移成功。首批内容附带[旧 starter 的逐条映射草案](content-review/legacy-starter-map.json)，仅用于审核旧资料的改写去向。
 
-## 本次示例与后续内容 PR
+## 首批资料草案
 
-现有 12 条资料是世界、大域、凡人、炼气、地点、灵石六条示例，加六类必须完整的灵根概率配置；这是满足跨文件闭合校验的最小评审资料集，不是任务所列的完整第一批世界。来源已统一，描述为本项目起草。
+`data/` 共 79 条资料。凡人至筑基阶段包含 72 条，涵盖一方世界、五大域、青溪镇及周边、三宗一坊、修行物资和人物。七个后续境界保留占位。原有 12 条最小样例存于 `tests/fixtures/minimal-catalog/`，服务校验测试使用固定样例。
 
-用户已选择保留 11 个境界，缺少的境界名称尚待补充；当前只提供连续的凡人 0、炼气 1，不擅自补造其余境界。世界名、宗门名、价格、寿元、灵根概率均仍需内容审核。格式审核后才扩展五大域、完整十一境界及阶段一的物品、功法、势力、人物和事件。
+境界共 10 项，从凡人 0 至渡劫 9。炼气分一至九层和大圆满，筑基分初期、中期、后期和大圆满。阶段一先写全这三个境界，其余能力与晋阶条件随对应阶段审定。
 
 启动生命周期和内存装载采用 [FastAPI lifespan](https://fastapi.tiangolo.com/advanced/events/)。原 Open5e 的 [许可证和版权声明](LICENSE.md) 保持原文，本地原仓库及上游历史保留；本分支不再包含其 Django 运行代码。

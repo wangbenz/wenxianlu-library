@@ -1,0 +1,86 @@
+{
+  "type": "faction",
+  "key": "tide-ink-sect",
+  "name": "汀墨观（暂定）",
+  "phase": 1,
+  "public": {
+    "description": "靠水路传递信物和制符的小宗门。初来的人要做纸、递信、记潮。观中愿教来路不同的弟子，课业随潮期安排，学徒要自己留出练功时间。",
+    "source": "问仙录原创设定"
+  },
+  "rules": {
+    "kind": "sect",
+    "seat": "place:tide-ink-gate",
+    "strongest_realm": "realm:zhuji",
+    "recruit": [
+      {
+        "roots": [
+          "root:mutant",
+          "root:heavenly"
+        ],
+        "rank": "inner"
+      },
+      {
+        "roots": [
+          "root:dual",
+          "root:triple",
+          "root:quad"
+        ],
+        "rank": "outer"
+      },
+      {
+        "roots": [
+          "root:penta"
+        ],
+        "rank": "servant"
+      }
+    ],
+    "ranks": {
+      "inner": {
+        "monthly": [
+          {
+            "item": "item:spirit-stone",
+            "quantity": 4
+          }
+        ],
+        "duties": "跟教习练符，核对出库的成符。"
+      },
+      "outer": {
+        "monthly": [
+          {
+            "item": "item:spirit-stone",
+            "quantity": 2
+          }
+        ],
+        "duties": "轮值送符、看守晾纸廊，回观交收据。"
+      },
+      "servant": {
+        "monthly": [
+          {
+            "item": "item:spirit-stone",
+            "quantity": 1
+          }
+        ],
+        "duties": "晒纸、磨砂并整理渡口来往账。"
+      }
+    },
+    "arts": [
+      "art:tide-ink-breathing",
+      "art:lightstep",
+      "art:heaven-eye"
+    ],
+    "specialties": [
+      "item:blank-talisman-paper",
+      "item:cinnabar-ink",
+      "item:lightstep-talisman",
+      "item:teaching-jade"
+    ],
+    "characters": [
+      "character:liang-jianwei",
+      "character:wen-yuetang"
+    ]
+  },
+  "narration": {
+    "style": "看货时先摸纸边，再读符头。递信弟子常把回程的潮时一并报出。"
+  },
+  "secret": {}
+}

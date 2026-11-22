@@ -4,15 +4,15 @@
   "name": "青溪镇",
   "phase": 1,
   "public": {
+    "description": "石梁渡旁的小镇。药铺和客栈挨着渡口的青石街，渡船来往于镇街和北岸坊市之间。",
     "source": "问仙录原创设定",
-    "description": "中洲边陲的一座小镇，偶有修士停留。",
     "aliases": [
       "青溪"
     ]
   },
   "rules": {
     "kind": "town",
-    "parent": "region:zhongzhou",
+    "parent": "place:lu-shui",
     "danger": "safe",
     "max_rarity": "uncommon",
     "realm_range": [
@@ -20,12 +20,12 @@
       "realm:lianqi"
     ],
     "products": [],
-    "factions": []
+    "factions": [
+      "faction:grey-awning-traders"
+    ]
   },
   "narration": {
-    "atmosphere": "沿河街巷里多是普通住户，早晚可听见集市叫卖。"
+    "atmosphere": "黄昏落渡时，船家会在桥头敲两下旧铜钵。"
   },
-  "secret": {
-    "notes": "仅为公开接口隔离验证准备的虚构说明，不是已发生的剧情。"
-  }
+  "secret": {}
 }

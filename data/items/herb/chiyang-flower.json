@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "chiyang-flower",
+  "name": "赤阳花",
+  "phase": 1,
+  "public": {
+    "description": "开在晒得着太阳的碎石坡上，花瓣边缘发暗。",
+    "usage": "午后花瓣干时采下花头，装在透气的纸包里。",
+    "limitations": "连茎闷装易败，湿花送到药房前要摊开。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "herb",
+    "grade": "tier_2",
+    "rarity": "uncommon",
+    "realm": "realm:fanren",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 3,
+      "max": 6,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "gather",
+      "market"
+    ],
+    "found_in": [
+      "place:wan-yao-foothills",
+      "place:songlu-gate",
+      "place:grey-awning-market"
+    ],
+    "stackable": true,
+    "effect": {
+      "type": "material",
+      "note": "暖性的炼丹辅材。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "暗红细瓣，中间的花粉沾手后发暖。"
+  },
+  "secret": {}
+}

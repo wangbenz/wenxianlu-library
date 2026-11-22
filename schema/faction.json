@@ -273,10 +273,6 @@
           "minItems": 0,
           "maxItems": 100,
           "uniqueItems": true
-        },
-        "visit_weight": {
-          "type": "number",
-          "exclusiveMinimum": 0
         }
       },
       "required": [
@@ -289,30 +285,7 @@
         "specialties",
         "characters"
       ],
-      "additionalProperties": false,
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "sect"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "visit_weight"
-            ]
-          },
-          "else": {
-            "not": {
-              "required": [
-                "visit_weight"
-              ]
-            }
-          }
-        }
-      ]
+      "additionalProperties": false
     },
     "narration": {
       "type": "object",

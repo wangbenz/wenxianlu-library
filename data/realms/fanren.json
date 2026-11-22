@@ -4,10 +4,10 @@
   "name": "凡人",
   "phase": 1,
   "public": {
-    "source": "通用修仙设定",
-    "description": "尚未引气入体的人族。",
-    "usage": "作为初始身份记录。",
-    "limitations": "不能施展依赖法力的术法。"
+    "description": "尚未引气入体。人可以先学识草、记账、辨路和运用凡兵，这些本领在进山和入门时同样用得上。",
+    "usage": "借日常手艺谋生、结识同路人，向懂行的人请教入门法。",
+    "limitations": "未能自行调动灵力施术，也不能驱使需要灵力的法器。",
+    "source": "通用修仙设定"
   },
   "rules": {
     "order": 0,
@@ -21,10 +21,13 @@
     "lifespan_years": 80,
     "can": [
       "mundane_labor",
-      "ordinary_weapon"
+      "ordinary_weapon",
+      "short_rest"
     ],
     "cannot": [
+      "absorb_qi",
       "basic_spell",
+      "use_low_artifact",
       "weapon_flight"
     ]
   },

@@ -1,0 +1,43 @@
+{
+  "type": "item",
+  "key": "protective-jade",
+  "name": "护身玉佩",
+  "phase": 1,
+  "public": {
+    "description": "系带处加固的小块玉佩，内刻护持纹。",
+    "usage": "预备抵挡冲击时引灵激发，事后查看玉面。",
+    "limitations": "须实际激发才能护持。玉纹断裂后需要修复。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "category": "artifact",
+    "grade": "low_artifact",
+    "rarity": "rare",
+    "realm": "realm:lianqi",
+    "price": {
+      "currency": "spirit_stone",
+      "min": 22,
+      "max": 35,
+      "unit": "low_spirit_stone"
+    },
+    "obtain": [
+      "market",
+      "sect",
+      "craft"
+    ],
+    "found_in": [
+      "place:grey-awning-market",
+      "place:white-cliff-gate"
+    ],
+    "stackable": false,
+    "effect": {
+      "type": "protect",
+      "note": "持有者运灵力可引出护持，裂纹会影响再次使用。"
+    },
+    "side_effects": ""
+  },
+  "narration": {
+    "appearance": "白玉透绿，中心有一条抛亮的细线。"
+  },
+  "secret": {}
+}

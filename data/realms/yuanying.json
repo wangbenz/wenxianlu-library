@@ -1,0 +1,39 @@
+{
+  "type": "realm",
+  "key": "yuanying",
+  "name": "元婴",
+  "phase": 2,
+  "public": {
+    "description": "由丹元孕育元婴，修行开始涉及更深的神魂与本命法门。",
+    "usage": "用于后续阶段的境界顺序与内容引用。",
+    "limitations": "具体能力和晋阶条件随对应阶段资料审定。",
+    "source": "通用修仙设定"
+  },
+  "rules": {
+    "order": 4,
+    "detail": "placeholder",
+    "stages": [
+      {
+        "key": "early",
+        "name": "初期"
+      },
+      {
+        "key": "middle",
+        "name": "中期"
+      },
+      {
+        "key": "late",
+        "name": "后期"
+      },
+      {
+        "key": "perfect",
+        "name": "大圆满"
+      }
+    ],
+    "lifespan_years": 1100,
+    "can": [],
+    "cannot": []
+  },
+  "narration": {},
+  "secret": {}
+}

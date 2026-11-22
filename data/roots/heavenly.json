@@ -4,8 +4,8 @@
   "name": "天灵根",
   "phase": 1,
   "public": {
-    "source": "通用修仙设定",
-    "description": "用于首轮格式评审的灵根类别；概率与速度仍为待审核草案。"
+    "description": "单一五行灵根，吐纳时容易分辨与自身属性相合的灵气。",
+    "source": "通用修仙设定"
   },
   "rules": {
     "kind": "heavenly",

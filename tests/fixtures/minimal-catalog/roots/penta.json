@@ -1,0 +1,26 @@
+{
+  "type": "root",
+  "key": "penta",
+  "name": "五灵根",
+  "phase": 1,
+  "public": {
+    "source": "通用修仙设定",
+    "description": "用于首轮格式评审的灵根类别；概率与速度仍为待审核草案。"
+  },
+  "rules": {
+    "kind": "penta",
+    "probability": 0.3,
+    "speed": "very_slow",
+    "elements": [
+      [
+        "metal",
+        "wood",
+        "water",
+        "fire",
+        "earth"
+      ]
+    ]
+  },
+  "narration": {},
+  "secret": {}
+}
