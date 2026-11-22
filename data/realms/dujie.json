@@ -2,25 +2,13 @@
   "type": "realm",
   "key": "dujie",
   "name": "渡劫",
-  "phase": 3,
+  "phase": 1,
   "public": {
-    "description": "承受飞升之劫的终局阶段。劫后能否飞升，取决于实际渡劫经过。",
-    "usage": "用于后续阶段的境界顺序与内容引用。",
-    "limitations": "具体能力和晋阶条件随对应阶段资料审定。",
-    "source": "通用修仙设定"
+    "description": "大乘之后为渡劫。"
   },
   "rules": {
     "order": 9,
-    "detail": "placeholder",
-    "stages": [
-      {
-        "key": "tribulation",
-        "name": "渡劫"
-      }
-    ],
-    "lifespan_years": 11000,
-    "can": [],
-    "cannot": []
+    "detail": "placeholder"
   },
   "narration": {},
   "secret": {}

@@ -2,37 +2,13 @@
   "type": "realm",
   "key": "dacheng",
   "name": "大乘",
-  "phase": 3,
+  "phase": 1,
   "public": {
-    "description": "修行走到下界的最后一段，须为飞升之劫准备。",
-    "usage": "用于后续阶段的境界顺序与内容引用。",
-    "limitations": "具体能力和晋阶条件随对应阶段资料审定。",
-    "source": "通用修仙设定"
+    "description": "合体之后为大乘。"
   },
   "rules": {
     "order": 8,
-    "detail": "placeholder",
-    "stages": [
-      {
-        "key": "early",
-        "name": "初期"
-      },
-      {
-        "key": "middle",
-        "name": "中期"
-      },
-      {
-        "key": "late",
-        "name": "后期"
-      },
-      {
-        "key": "perfect",
-        "name": "大圆满"
-      }
-    ],
-    "lifespan_years": 11000,
-    "can": [],
-    "cannot": []
+    "detail": "placeholder"
   },
   "narration": {},
   "secret": {}

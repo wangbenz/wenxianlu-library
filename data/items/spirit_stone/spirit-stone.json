@@ -30,7 +30,6 @@
       "reward"
     ],
     "found_in": [
-      "place:grey-awning-market",
       "place:white-cliff-gate",
       "place:songlu-gate",
       "place:tide-ink-gate"
@@ -40,7 +39,10 @@
       "type": "currency",
       "note": "修行交易常用计价单位。"
     },
-    "side_effects": ""
+    "side_effects": "",
+    "found_in_kinds": [
+      "market"
+    ]
   },
   "narration": {
     "appearance": "青白色，断面像一层薄薄的雾。"

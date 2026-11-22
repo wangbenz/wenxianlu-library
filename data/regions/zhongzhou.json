@@ -4,13 +4,13 @@
   "name": "中洲",
   "phase": 1,
   "public": {
-    "description": "南缘水网密布，郡城收粮，山门守灵脉。青溪镇处在商道和支流交会处，平常卖的是药、布和船桨。",
+    "description": "中洲河网贯穿平原，沿岸分布着凡人的郡县和商埠。修仙宗门大多建在有灵脉的山中，山下的坊市把各地商路接了起来。",
     "source": "问仙录原创设定"
   },
   "rules": {
     "realm_range": [
       "realm:fanren",
-      "realm:zhuji"
+      "realm:yuanying"
     ],
     "danger": "low"
   },

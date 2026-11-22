@@ -2,37 +2,13 @@
   "type": "realm",
   "key": "heti",
   "name": "合体",
-  "phase": 3,
+  "phase": 1,
   "public": {
-    "description": "把神魂、肉身与所修法门融成可长久维持的一体。",
-    "usage": "用于后续阶段的境界顺序与内容引用。",
-    "limitations": "具体能力和晋阶条件随对应阶段资料审定。",
-    "source": "通用修仙设定"
+    "description": "炼虚之后为合体。"
   },
   "rules": {
     "order": 7,
-    "detail": "placeholder",
-    "stages": [
-      {
-        "key": "early",
-        "name": "初期"
-      },
-      {
-        "key": "middle",
-        "name": "中期"
-      },
-      {
-        "key": "late",
-        "name": "后期"
-      },
-      {
-        "key": "perfect",
-        "name": "大圆满"
-      }
-    ],
-    "lifespan_years": 7200,
-    "can": [],
-    "cannot": []
+    "detail": "placeholder"
   },
   "narration": {},
   "secret": {}

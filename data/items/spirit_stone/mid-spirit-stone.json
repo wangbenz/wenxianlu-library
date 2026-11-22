@@ -5,8 +5,8 @@
   "phase": 1,
   "public": {
     "description": "灵气凝得较紧，常用于较大宗的买卖。",
-    "usage": "交由懂验石的人辨明品相，再谈折价。",
-    "limitations": "价目只是大致行情，残损和灵气流失都会影响折价。",
+    "usage": "一枚完好的中品灵石可兑一百枚下品灵石。",
+    "limitations": "灵气散失或石体破损时，需要单独验定品相。",
     "source": "通用修仙设定"
   },
   "rules": {
@@ -16,8 +16,8 @@
     "realm": "realm:zhuji",
     "price": {
       "currency": "spirit_stone",
-      "min": 90,
-      "max": 115,
+      "min": 100,
+      "max": 100,
       "unit": "low_spirit_stone"
     },
     "obtain": [
@@ -31,7 +31,7 @@
     "stackable": true,
     "effect": {
       "type": "currency",
-      "note": "灵气更集中，实际估价由交易双方验定。"
+      "note": "完好灵石按品阶逐级一兑一百。"
     },
     "side_effects": ""
   },

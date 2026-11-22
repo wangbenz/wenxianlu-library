@@ -82,19 +82,19 @@
       "reason": "保留原 key，按新格式补齐阶段和适用范围。"
     },
     "place_types:herb-garden": {
-      "action": "replace",
-      "target": "place:reed-bank-herb-garden",
-      "reason": "把药圃类型改写为芦湾药圃实例，供青溪地区内容使用。"
+      "action": "place_kind",
+      "kind": "herb_garden",
+      "reason": "旧编号表示可在多地出现的场所类型，保留为地点分类。"
     },
     "place_types:quiet-chamber": {
-      "action": "replace",
-      "target": "place:market-quiet-room",
-      "reason": "把静室类型改写为灰篷坊市可按时借用的静室实例。"
+      "action": "place_kind",
+      "kind": "quiet_room",
+      "reason": "旧编号表示可在多地出现的场所类型，保留为地点分类。"
     },
     "place_types:cultivator-market": {
-      "action": "replace",
-      "target": "place:grey-awning-market",
-      "reason": "把坊市类型改写为灰篷坊市实例，加入验货与寄存的地方设定。"
+      "action": "place_kind",
+      "kind": "market",
+      "reason": "旧编号表示可在多地出现的场所类型，保留为地点分类。"
     }
   }
 }

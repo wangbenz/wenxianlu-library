@@ -4,30 +4,21 @@
   "name": "引气诀抄本",
   "phase": 1,
   "public": {
-    "description": "抄有吐纳顺序、坐姿和收功提醒的薄册。",
-    "usage": "对照口授理解章节，再按自己能承受的节奏练习。",
+    "description": "宗门传授引气诀时使用的手抄本，记有坐姿、吐纳次序和收功法。",
+    "usage": "得师门传授，或因一段机缘得到抄本后，可依诀研习。",
     "limitations": "持有抄本只是有了学习材料，行气进度由实际练习决定。",
     "source": "通用修仙设定"
   },
   "rules": {
     "category": "manual",
     "grade": "huang_low",
-    "rarity": "common",
+    "rarity": "uncommon",
     "realm": "realm:fanren",
-    "price": {
-      "currency": "spirit_stone",
-      "min": 2,
-      "max": 4,
-      "unit": "low_spirit_stone"
-    },
     "obtain": [
-      "market",
       "sect",
       "reward"
     ],
     "found_in": [
-      "place:hesheng-apothecary",
-      "place:grey-awning-market",
       "place:songlu-gate"
     ],
     "stackable": false,

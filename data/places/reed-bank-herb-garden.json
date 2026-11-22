@@ -5,13 +5,10 @@
   "phase": 1,
   "public": {
     "description": "青溪镇外沿水开的药圃。水浅时可沿圃埂进去，涨水要先放开分水闸。禾生药铺常来收叶。",
-    "source": "问仙录原创设定",
-    "aliases": [
-      "药圃"
-    ]
+    "source": "问仙录原创设定"
   },
   "rules": {
-    "kind": "building",
+    "kind": "herb_garden",
     "parent": "place:lu-shui",
     "danger": "low",
     "max_rarity": "common",

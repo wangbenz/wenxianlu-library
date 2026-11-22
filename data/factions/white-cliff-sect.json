@@ -10,7 +10,7 @@
   "rules": {
     "kind": "sect",
     "seat": "place:white-cliff-gate",
-    "strongest_realm": "realm:zhuji",
+    "strongest_realm": "realm:jindan",
     "recruit": [
       {
         "roots": [
