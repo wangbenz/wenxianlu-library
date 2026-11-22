@@ -199,7 +199,7 @@ def _cross_validate(records: dict[str, dict], files: dict[str, str]) -> None:
                 fail(file, "/rules/stages", "小阶段 key 必须唯一")
             if set(rules.get("can", ())) & set(rules.get("cannot", ())):
                 fail(file, "/rules/cannot", "能力不能同时允许和禁止")
-        if record["type"] == "item" and rules["price"]["min"] > rules["price"]["max"]:
+        if record["type"] == "item" and "price" in rules and rules["price"]["min"] > rules["price"]["max"]:
             fail(file, "/rules/price", "最低价格不能高于最高价格")
         if record["type"] == "root":
             for index, group in enumerate(rules["elements"]):
