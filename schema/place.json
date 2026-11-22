@@ -8,7 +8,7 @@
     },
     "key": {
       "type": "string",
-      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])",
       "maxLength": 80
     },
     "name": {
@@ -74,7 +74,7 @@
         },
         "parent": {
           "type": "string",
-          "pattern": "^(?:place|region):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          "pattern": "^(?:place|region):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
         },
         "danger": {
           "type": "string",
@@ -99,7 +99,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+            "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
           },
           "minItems": 2,
           "maxItems": 2
@@ -108,7 +108,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+            "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
           },
           "minItems": 0,
           "maxItems": 100,
@@ -118,7 +118,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(?:faction):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+            "pattern": "^(?:faction):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
           },
           "minItems": 0,
           "maxItems": 100,

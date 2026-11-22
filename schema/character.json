@@ -8,7 +8,7 @@
     },
     "key": {
       "type": "string",
-      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])",
       "maxLength": 80
     },
     "name": {
@@ -65,25 +65,25 @@
       "properties": {
         "realm": {
           "type": "string",
-          "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
         },
         "stage": {
           "type": "string",
-          "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
         },
         "faction": {
           "type": "string",
-          "pattern": "^(?:faction):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          "pattern": "^(?:faction):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
         },
         "location": {
           "type": "string",
-          "pattern": "^(?:place):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+          "pattern": "^(?:place):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
         },
         "holdings": {
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+            "pattern": "^(?:item):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
           },
           "minItems": 0,
           "maxItems": 100,

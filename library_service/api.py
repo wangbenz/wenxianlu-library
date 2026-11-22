@@ -112,12 +112,15 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             raise HTTPException(422, "未知资料类别")
         if phase is not None and not 1 <= phase <= snapshot.enabled_phase:
             raise HTTPException(422, "内容阶段尚未启用")
+        visible = snapshot.public_keys if public else snapshot.records
         if keys:
             if any(not REFERENCE.fullmatch(key) for key in keys):
                 raise HTTPException(422, "资料编号须为 类别:key")
-            if any(key not in snapshot.records for key in keys):
+            if any(key not in visible for key in keys):
                 raise HTTPException(404, "请求的资料不存在或尚未启用")
         selected = snapshot.select(kind=kind, phase=phase, keys=keys or None)
+        if public:
+            selected = [key for key in selected if key in visible]
         return {
             "count": len(selected),
             "offset": offset,
@@ -130,7 +133,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     def detail(kind, key, public):
         snapshot = store.snapshot
         reference = f"{kind}:{key}"
-        if reference not in snapshot.records:
+        visible = snapshot.public_keys if public else snapshot.records
+        if reference not in visible:
             raise HTTPException(404, "资料不存在或尚未启用")
         return snapshot.entry(reference, public=public)
 

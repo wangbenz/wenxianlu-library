@@ -8,7 +8,7 @@
     },
     "key": {
       "type": "string",
-      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])",
       "maxLength": 80
     },
     "name": {
@@ -61,7 +61,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+            "pattern": "^(?:realm):[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?![\\s\\S])"
           },
           "minItems": 2,
           "maxItems": 2

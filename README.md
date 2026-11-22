@@ -90,7 +90,11 @@ uv run uvicorn library_service.api:create_app --factory --host 127.0.0.1 --port 
 
 受保护接口使用 `Authorization: Bearer ...`。两个令牌不能互换。内部批量请求为 `{"keys":["realm:lianqi","item:spirit-stone"]}`，最多 100 个；缺失或未启用资料使整批失败，避免静默丢条。
 
+分页调用方应比对每页顶层的 `revision`。翻页期间版本发生变化时，丢弃已拼接的页面，从第一页重新读取。
+
 列表支持 kind、phase、重复 keys 参数、offset 和 limit（最大 100）；phase 不得请求未启用阶段。列表成功响应含 count/offset/limit/results 与版本标识。所有业务成功响应均含 revision、content_hash。
+
+资料服务部署在回环地址或仅游戏后端可访问的私网，由游戏端按命卷中已发现的条目转发给 H5。公网网关不应直通资料服务。公开列表、按编号查询和详情只收录 `public` 非空的条目；其名称、编号和公开身份也属于玩家可读内容。
 
 公开单条严格只返回 `type/key/name/phase/public/revision/content_hash`；不返回 rules、narration、secret。H5 应通过游戏后端查询已见条目，资料库本身不知道角色见过什么。公开 Git 仓库中的 JSON 源文件仍可被阅读：本 PR 的 secret 仅为虚构隔离样例，真实保密剧情应使用受限内容仓库/发布包，不能仅靠 API 投影隐藏公开源码。
 
@@ -118,6 +122,6 @@ uv run python -m library_service.migrate --legacy tests/fixtures/legacy/starter-
 
 现有 12 条资料是世界、大域、凡人、炼气、地点、灵石六条示例，加六类必须完整的灵根概率配置；这是满足跨文件闭合校验的最小评审资料集，不是任务所列的完整第一批世界。来源已统一，描述为本项目起草。
 
-用户已选择保留 11 个境界，缺少的境界名称尚待补充；当前只提供连续的凡人 0、炼气 1，不擅自补造其余境界。世界名、宗门名、价格、寿元、灵根概率均仍需内容审核。格式审核后才扩展五大域、完整十一境界及阶段一的物品、功法、势力、人物和事件。
+当前样例包括凡人 0、炼气 1。完整目录采用十个境界，从凡人 0 至渡劫 9。世界名、宗门名、价格、寿元、灵根概率均仍需内容审核。格式审核后才扩展五大域、完整十个境界及阶段一的物品、功法、势力、人物和事件。
 
 启动生命周期和内存装载采用 [FastAPI lifespan](https://fastapi.tiangolo.com/advanced/events/)。原 Open5e 的 [许可证和版权声明](LICENSE.md) 保持原文，本地原仓库及上游历史保留；本分支不再包含其 Django 运行代码。

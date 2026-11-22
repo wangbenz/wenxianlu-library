@@ -21,6 +21,37 @@ def edit(data, path, mutate):
     file.write_text(json.dumps(value, ensure_ascii=False))
 
 
+@pytest.mark.parametrize("suffix", ["\n", "\r\n", "\t"])
+@pytest.mark.parametrize(
+    "file,field,target,path",
+    [
+        ("items/spirit_stone/spirit-stone.json", "found_in", "place:qingxi-town", "/rules/found_in/0"),
+        ("characters/guide.json", "realm", "realm:lianqi", "/rules/realm"),
+        ("places/qingxi-town.json", "parent", "region:zhongzhou", "/rules/parent"),
+    ],
+)
+def test_reference_requires_exact_identifier(complete, suffix, file, field, target, path):
+    value = target + suffix
+    edit(complete, file, lambda r: r["rules"].update({field: [value] if field == "found_in" else value}))
+    with pytest.raises(CatalogError) as caught:
+        load(complete)
+    assert (caught.value.issues[0].file, caught.value.issues[0].field) == (file, path)
+
+
+def test_missing_ancestor_reports_its_own_field(data):
+    town = json.loads((data / "places/qingxi-town.json").read_text())
+    town["key"] = "later-place"
+    town["rules"]["parent"] = "region:unknown"
+    write(data, "place", town)
+    edit(data, "places/qingxi-town.json", lambda r: r["rules"].update(parent="place:later-place"))
+    with pytest.raises(CatalogError) as caught:
+        load(data)
+    assert (caught.value.issues[0].file, caught.value.issues[0].field) == (
+        "places/later-place.json",
+        "/rules/parent",
+    )
+
+
 def test_all_ten_categories_and_detached_outputs(complete):
     snapshot = load(complete)
     assert len(snapshot.records) == 16
